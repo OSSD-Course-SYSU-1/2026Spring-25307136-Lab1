@@ -901,3 +901,331 @@ at F:\Study\kaiyuan\clone\page-redirection-master\entry\src\main\resources\base\
 [2026-04-21T16:54:53.319] [DEBUG] debug-file - watch worker: worker id should be larger than 0. Nothing will be sent to any worker thread.
 [2026-04-21T16:54:53.327] [DEBUG] debug-file - worker[30] exits with exit code 1.
 [2026-04-21T16:54:53.328] [DEBUG] debug-file - worker[29] exits with exit code 1.
+[2026-05-12T17:38:14.150] [DEBUG] debug-file - java daemon tryConnect failed Error: connect ECONNREFUSED 127.0.0.1:45050
+[2026-05-12T17:38:14.185] [DEBUG] debug-file - java daemon started at port 45050 pid 23000
+[2026-05-12T17:38:11.328] [DEBUG] debug-file - env: nodejsVersion=v18.20.1
+[2026-05-12T17:38:11.479] [DEBUG] debug-file - env: daemon=true
+[2026-05-12T17:38:11.330] [DEBUG] debug-file - env: hvigor-config.json5 content = { modelVersion: '5.0.0', dependencies: {} }
+[2026-05-12T17:38:15.429] [DEBUG] debug-file - session manager: set active socket. socketId=PsxcZp-dSMVZ_v_fAAAB
+[2026-05-12T17:38:15.442] [DEBUG] debug-file - watch worker: worker id should be larger than 0. Nothing will be sent to any worker thread.
+[2026-05-12T17:38:15.446] [DEBUG] debug-file - Since there is no instance or instance is terminated, create a new worker pool.
+[2026-05-12T17:38:15.446] [DEBUG] debug-file - Worker pool is initialized with config:  {
+  minPoolNum: 2,
+  maxPoolNum: undefined,
+  maxCoreSize: undefined,
+  cacheCapacity: undefined,
+  cacheTtl: undefined
+}
+[2026-05-12T17:38:15.447] [DEBUG] debug-file - Create  resident worker with id: 0.
+[2026-05-12T17:38:15.448] [DEBUG] debug-file - Create  resident worker with id: 1.
+[2026-05-12T17:38:15.450] [DEBUG] debug-file - Workers' log level updated to INFO
+[2026-05-12T17:38:15.458] [DEBUG] debug-file - Hvigor init with startParameters:{
+  hvigorfileTypeCheck: false,
+  parallelExecution: true,
+  incrementalExecution: true,
+  printStackTrace: false,
+  daemon: true,
+  analyze: 0,
+  logLevel: Level { level: 20000, levelStr: 'INFO', colour: 'green' },
+  optimizationStrategy: 'memory',
+  hotCompile: undefined,
+  hotReloadBuild: undefined,
+  customizedParam: undefined
+}
+[2026-05-12T17:38:15.483] [DEBUG] debug-file - Cache service initialization finished in 25 ms 
+[2026-05-12T17:38:15.485] [DEBUG] debug-file - hvigorfile, resolving F:\Study\kaiyuan\clone\page-redirection-master\hvigorfile.ts
+[2026-05-12T17:38:38.703] [DEBUG] debug-file - hvigorfile, require result:  { default: { plugins: [] } }
+[2026-05-12T17:38:38.704] [DEBUG] debug-file - hvigorfile, binding system plugins null
+[2026-05-12T17:38:38.705] [DEBUG] debug-file - Starting plugin build process
+[2026-05-12T17:38:38.705] [DEBUG] debug-file - App plugin prepare start...
+[2026-05-12T17:38:38.705] [DEBUG] debug-file - App plugin prepare end...
+[2026-05-12T17:38:38.705] [DEBUG] debug-file - App plugin creating...
+[2026-05-12T17:38:38.910] [DEBUG] debug-file - App plugin register hook start...
+[2026-05-12T17:38:38.910] [DEBUG] debug-file - App plugin register hook end...
+[2026-05-12T17:38:38.910] [DEBUG] debug-file - Plugin build process completed
+[2026-05-12T17:38:38.911] [DEBUG] debug-file - Start initialize project's product build option map with build mode debug.
+[2026-05-12T17:38:38.912] [DEBUG] debug-file - Picking option from product 'default' with build mode 'debug'.
+[2026-05-12T17:38:38.912] [DEBUG] debug-file - Product 'default' build option initialized
+[2026-05-12T17:38:38.912] [DEBUG] debug-file - End initialize project's product build option map with build mode 'debug'.
+[2026-05-12T17:38:38.914] [DEBUG] debug-file - Obtain build option for product 'default'in this build.
+[2026-05-12T17:38:38.924] [DEBUG] debug-file - No signingConfig found, initRemoteHspCache failed.
+[2026-05-12T17:38:38.932] [DEBUG] debug-file - Local scan or download HarmonyOS sdk components toolchains,ets,js,native,previewer
+[2026-05-12T17:38:38.936] [DEBUG] debug-file - Local scan or download hmscore sdk components toolchains,ets,native
+[2026-05-12T17:38:38.940] [DEBUG] debug-file - Start recording SDK configuration permission data.
+[2026-05-12T17:38:38.988] [DEBUG] debug-file - Sdk init in 58 ms 
+[2026-05-12T17:38:38.994] [DEBUG] debug-file - Project task initialization takes 6 ms 
+[2026-05-12T17:38:38.995] [DEBUG] debug-file - hvigorfile, binding custom plugins []
+[2026-05-12T17:38:38.995] [DEBUG] debug-file - hvigorfile, no custom plugins were found in F:\Study\kaiyuan\clone\page-redirection-master\hvigorfile.ts
+[2026-05-12T17:38:38.995] [DEBUG] debug-file - hvigorfile, resolve finished F:\Study\kaiyuan\clone\page-redirection-master\hvigorfile.ts
+[2026-05-12T17:38:38.996] [DEBUG] debug-file - hvigorfile, resolving F:\Study\kaiyuan\clone\page-redirection-master\entry\hvigorfile.ts
+[2026-05-12T17:38:39.008] [DEBUG] debug-file - hvigorfile, require result:  { default: { plugins: [] } }
+[2026-05-12T17:38:39.008] [DEBUG] debug-file - hvigorfile, binding system plugins null
+[2026-05-12T17:38:39.008] [DEBUG] debug-file - Starting plugin build process
+[2026-05-12T17:38:39.009] [DEBUG] debug-file - Hap plugin creating...
+[2026-05-12T17:38:39.015] [DEBUG] debug-file - failed to load cangjie to dynamically generate schemas: Error: Cannot find module '@ohos/cangjie-build-support/index'
+Require stack:
+- F:\Study\kaiyuan\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\hooks\cangjie-register.js
+- F:\Study\kaiyuan\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\strategy\stage-init-strategy.js
+- F:\Study\kaiyuan\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\builder\abstract-plugin-builder.js
+- F:\Study\kaiyuan\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\builder\app-plugin-builder.js
+- F:\Study\kaiyuan\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\src\plugin\factory\plugin-factory.js
+- F:\Study\kaiyuan\DevEco Studio\tools\hvigor\hvigor-ohos-plugin\index.js
+- F:\Study\kaiyuan\clone\page-redirection-master\hvigorfile.ts
+- F:\Study\kaiyuan\DevEco Studio\tools\hvigor\hvigor\src\base\internal\lifecycle\configuration.js
+- F:\Study\kaiyuan\DevEco Studio\tools\hvigor\hvigor\src\base\boot\index.js
+- F:\Study\kaiyuan\DevEco Studio\tools\hvigor\hvigor\src\base\daemon\cluster\worker-process-lifecycle.js
+- F:\Study\kaiyuan\DevEco Studio\tools\hvigor\hvigor\src\base\daemon\process\daemon-process-boot-script.js
+[2026-05-12T17:38:39.030] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=entry, buildMode=debug
+[2026-05-12T17:38:39.031] [DEBUG] debug-file - Target 'default' config initialized
+[2026-05-12T17:38:39.032] [DEBUG] debug-file - Module 'entry' target 'default' build option initialized
+[2026-05-12T17:38:39.032] [DEBUG] debug-file - End initialize module-target build option map, moduleName=entry
+[2026-05-12T17:38:39.032] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=entry, buildMode=release
+[2026-05-12T17:38:39.032] [DEBUG] debug-file - Target 'default' config initialized
+[2026-05-12T17:38:39.033] [DEBUG] debug-file - Module 'entry' target 'default' build option initialized
+[2026-05-12T17:38:39.033] [DEBUG] debug-file - End initialize module-target build option map, moduleName=entry
+[2026-05-12T17:38:39.033] [DEBUG] debug-file - Start initialize module-target build option map, moduleName=entry, buildMode=debug
+[2026-05-12T17:38:39.033] [DEBUG] debug-file - Target 'default' config initialized
+[2026-05-12T17:38:39.033] [DEBUG] debug-file - Module 'entry' target 'default' build option initialized
+[2026-05-12T17:38:39.033] [DEBUG] debug-file - End initialize module-target build option map, moduleName=entry
+[2026-05-12T17:38:39.033] [DEBUG] debug-file - Obtain build option for module 'entry' target 'default'in this build.
+[2026-05-12T17:38:39.039] [DEBUG] debug-file - Module entry task initialization takes 5 ms 
+[2026-05-12T17:38:39.039] [DEBUG] debug-file - Hap plugin register hook start...
+[2026-05-12T17:38:39.039] [DEBUG] debug-file - Hap plugin register hook end...
+[2026-05-12T17:38:39.039] [DEBUG] debug-file - Plugin build process completed
+[2026-05-12T17:38:39.040] [DEBUG] debug-file - hvigorfile, binding custom plugins []
+[2026-05-12T17:38:39.040] [DEBUG] debug-file - hvigorfile, no custom plugins were found in F:\Study\kaiyuan\clone\page-redirection-master\entry\hvigorfile.ts
+[2026-05-12T17:38:39.040] [DEBUG] debug-file - hvigorfile, resolve finished F:\Study\kaiyuan\clone\page-redirection-master\entry\hvigorfile.ts
+[2026-05-12T17:38:39.055] [DEBUG] debug-file - hvigorfile, resolve hvigorfile dependencies in 15 ms 
+[2026-05-12T17:38:39.055] [DEBUG] debug-file - project has submodules:entry
+[2026-05-12T17:38:39.057] [DEBUG] debug-file - start to load updatedOhPackageInfo to the disk
+[2026-05-12T17:38:39.063] [DEBUG] debug-file - load to the disk finished
+[2026-05-12T17:38:39.064] [DEBUG] debug-file - Start to initialize dependency information.
+[2026-05-12T17:38:39.066] [DEBUG] debug-file - Module page-redirection-master Collected Dependency: 
+[2026-05-12T17:38:39.066] [DEBUG] debug-file - Module page-redirection-master's total dependency: 0
+[2026-05-12T17:38:39.068] [DEBUG] debug-file - Start to initialize dependency information.
+[2026-05-12T17:38:39.071] [DEBUG] debug-file - Module entry Collected Dependency: 
+[2026-05-12T17:38:39.071] [DEBUG] debug-file - Module entry's total dependency: 0
+[2026-05-12T17:38:39.074] [DEBUG] debug-file - Configuration phase cost:23 s 591 ms 
+[2026-05-12T17:38:39.076] [DEBUG] debug-file - Configuration task cost before running: 23 s 626 ms 
+[2026-05-12T17:38:39.083] [DEBUG] debug-file - Executing task :entry:default@PreBuild
+[2026-05-12T17:38:39.085] [DEBUG] debug-file - Task 'entry:default@PreBuild' cost while wrapping incremental declarations: 1 ms 
+[2026-05-12T17:38:39.094] [DEBUG] debug-file - Incremental task entry:default@PreBuild pre-execution cost: 6 ms .
+[2026-05-12T17:38:39.094] [DEBUG] debug-file - entry : default@PreBuild cost memory 0.46770477294921875
+[2026-05-12T17:38:39.096] [INFO] debug-file - UP-TO-DATE :entry:default@PreBuild...  
+[2026-05-12T17:38:39.098] [DEBUG] debug-file - Executing task :entry:default@CreateModuleInfo
+[2026-05-12T17:38:39.098] [DEBUG] debug-file - Task 'entry:default@CreateModuleInfo' cost while wrapping incremental declarations: 1 ms 
+[2026-05-12T17:38:39.098] [DEBUG] debug-file - entry : default@CreateModuleInfo cost memory 0.05139923095703125
+[2026-05-12T17:38:39.099] [DEBUG] debug-file - runTaskFromQueue task cost before running: 23 s 648 ms 
+[2026-05-12T17:38:39.099] [INFO] debug-file - Finished :entry:default@CreateModuleInfo... after 1 ms 
+[2026-05-12T17:38:39.100] [DEBUG] debug-file - Executing task :entry:default@GenerateMetadata
+[2026-05-12T17:38:39.101] [DEBUG] debug-file - Task 'entry:default@GenerateMetadata' cost while wrapping incremental declarations: 1 ms 
+[2026-05-12T17:38:39.102] [DEBUG] debug-file - Incremental task entry:default@GenerateMetadata pre-execution cost: 1 ms .
+[2026-05-12T17:38:39.102] [DEBUG] debug-file - entry : default@GenerateMetadata cost memory 0.10025787353515625
+[2026-05-12T17:38:39.102] [INFO] debug-file - UP-TO-DATE :entry:default@GenerateMetadata...  
+[2026-05-12T17:38:39.103] [DEBUG] debug-file - Executing task :entry:default@ConfigureCmake
+[2026-05-12T17:38:39.103] [DEBUG] debug-file - entry : default@ConfigureCmake cost memory 0.0176239013671875
+[2026-05-12T17:38:39.104] [DEBUG] debug-file - runTaskFromQueue task cost before running: 23 s 653 ms 
+[2026-05-12T17:38:39.104] [INFO] debug-file - Finished :entry:default@ConfigureCmake... after 1 ms 
+[2026-05-12T17:38:39.105] [DEBUG] debug-file - Executing task :entry:default@MergeProfile
+[2026-05-12T17:38:39.105] [DEBUG] debug-file - Task 'entry:default@MergeProfile' cost while wrapping incremental declarations: 1 ms 
+[2026-05-12T17:38:39.108] [DEBUG] debug-file - Incremental task entry:default@MergeProfile pre-execution cost: 2 ms .
+[2026-05-12T17:38:39.108] [DEBUG] debug-file - entry : default@MergeProfile cost memory 0.1526641845703125
+[2026-05-12T17:38:39.108] [INFO] debug-file - UP-TO-DATE :entry:default@MergeProfile...  
+[2026-05-12T17:38:39.109] [DEBUG] debug-file - Executing task :entry:default@CreateBuildProfile
+[2026-05-12T17:38:39.110] [DEBUG] debug-file - Task 'entry:default@CreateBuildProfile' cost while wrapping incremental declarations: 1 ms 
+[2026-05-12T17:38:39.111] [DEBUG] debug-file - Incremental task entry:default@CreateBuildProfile pre-execution cost: 1 ms .
+[2026-05-12T17:38:39.111] [DEBUG] debug-file - entry : default@CreateBuildProfile cost memory 0.10205078125
+[2026-05-12T17:38:39.111] [INFO] debug-file - UP-TO-DATE :entry:default@CreateBuildProfile...  
+[2026-05-12T17:38:39.112] [DEBUG] debug-file - Executing task :entry:default@PreCheckSyscap
+[2026-05-12T17:38:39.112] [DEBUG] debug-file - entry : default@PreCheckSyscap cost memory 0.0188446044921875
+[2026-05-12T17:38:39.112] [DEBUG] debug-file - runTaskFromQueue task cost before running: 23 s 662 ms 
+[2026-05-12T17:38:39.113] [INFO] debug-file - Finished :entry:default@PreCheckSyscap... after 1 ms 
+[2026-05-12T17:38:39.114] [DEBUG] debug-file - Executing task :entry:default@GeneratePkgContextInfo
+[2026-05-12T17:38:39.121] [DEBUG] debug-file - Task 'entry:default@GeneratePkgContextInfo' cost while wrapping incremental declarations: 1 ms 
+[2026-05-12T17:38:39.121] [DEBUG] debug-file - entry : default@GeneratePkgContextInfo cost memory 0.36412811279296875
+[2026-05-12T17:38:39.121] [DEBUG] debug-file - runTaskFromQueue task cost before running: 23 s 671 ms 
+[2026-05-12T17:38:39.121] [INFO] debug-file - Finished :entry:default@GeneratePkgContextInfo... after 8 ms 
+[2026-05-12T17:38:39.124] [DEBUG] debug-file - Executing task :entry:default@ProcessIntegratedHsp
+[2026-05-12T17:38:39.125] [DEBUG] debug-file - entry:default@ProcessIntegratedHsp is not up-to-date, since the output file 'F:\Study\kaiyuan\clone\page-redirection-master\build\cache\default\integrated_hsp\integratedHspCache.json' does not exist.
+[2026-05-12T17:38:39.125] [DEBUG] debug-file - Incremental task entry:default@ProcessIntegratedHsp pre-execution cost: 1 ms .
+[2026-05-12T17:38:39.125] [DEBUG] debug-file - entry : default@ProcessIntegratedHsp cost memory 0.0737762451171875
+[2026-05-12T17:38:39.125] [DEBUG] debug-file - runTaskFromQueue task cost before running: 23 s 675 ms 
+[2026-05-12T17:38:39.125] [INFO] debug-file - Finished :entry:default@ProcessIntegratedHsp... after 1 ms 
+[2026-05-12T17:38:39.126] [DEBUG] debug-file - Executing task :entry:default@BuildNativeWithCmake
+[2026-05-12T17:38:39.127] [DEBUG] debug-file - entry : default@BuildNativeWithCmake cost memory 0.016815185546875
+[2026-05-12T17:38:39.127] [DEBUG] debug-file - runTaskFromQueue task cost before running: 23 s 676 ms 
+[2026-05-12T17:38:39.127] [INFO] debug-file - Finished :entry:default@BuildNativeWithCmake... after 1 ms 
+[2026-05-12T17:38:39.128] [DEBUG] debug-file - Executing task :entry:default@MakePackInfo
+[2026-05-12T17:38:39.129] [DEBUG] debug-file - Incremental task entry:default@MakePackInfo pre-execution cost: 2 ms .
+[2026-05-12T17:38:39.129] [DEBUG] debug-file - entry : default@MakePackInfo cost memory 0.1190338134765625
+[2026-05-12T17:38:39.130] [INFO] debug-file - UP-TO-DATE :entry:default@MakePackInfo...  
+[2026-05-12T17:38:39.131] [DEBUG] debug-file - Executing task :entry:default@SyscapTransform
+[2026-05-12T17:38:39.131] [DEBUG] debug-file - File: 'F:\Study\kaiyuan\clone\page-redirection-master\entry\src\main\syscap.json' from 'sysCapJsonPath' is not exists, just ignore.
+[2026-05-12T17:38:39.132] [DEBUG] debug-file - Task 'entry:default@SyscapTransform' cost while wrapping incremental declarations: 2 ms 
+[2026-05-12T17:38:39.145] [DEBUG] debug-file - entry:default@SyscapTransform is not up-to-date, since the output file 'F:\Study\kaiyuan\clone\page-redirection-master\entry\build\default\intermediates\syscap\default\rpcid.sc' does not exist.
+[2026-05-12T17:38:39.145] [DEBUG] debug-file - Incremental task entry:default@SyscapTransform pre-execution cost: 13 ms .
+[2026-05-12T17:38:39.145] [DEBUG] debug-file - entry : default@SyscapTransform cost memory 0.1824798583984375
+[2026-05-12T17:38:39.145] [DEBUG] debug-file - runTaskFromQueue task cost before running: 23 s 695 ms 
+[2026-05-12T17:38:39.146] [INFO] debug-file - Finished :entry:default@SyscapTransform... after 15 ms 
+[2026-05-12T17:38:39.147] [DEBUG] debug-file - Executing task :entry:default@ProcessProfile
+[2026-05-12T17:38:39.160] [DEBUG] debug-file - Task 'entry:default@ProcessProfile' cost while wrapping incremental declarations: 1 ms 
+[2026-05-12T17:38:39.162] [DEBUG] debug-file - Incremental task entry:default@ProcessProfile pre-execution cost: 2 ms .
+[2026-05-12T17:38:39.162] [DEBUG] debug-file - entry : default@ProcessProfile cost memory 0.15760040283203125
+[2026-05-12T17:38:39.162] [INFO] debug-file - UP-TO-DATE :entry:default@ProcessProfile...  
+[2026-05-12T17:38:39.163] [DEBUG] debug-file - Executing task :entry:default@ProcessRouterMap
+[2026-05-12T17:38:39.166] [DEBUG] debug-file - Incremental task entry:default@ProcessRouterMap pre-execution cost: 2 ms .
+[2026-05-12T17:38:39.166] [DEBUG] debug-file - entry : default@ProcessRouterMap cost memory 0.14888763427734375
+[2026-05-12T17:38:39.166] [INFO] debug-file - UP-TO-DATE :entry:default@ProcessRouterMap...  
+[2026-05-12T17:38:39.168] [DEBUG] debug-file - Executing task :entry:default@ProcessShareConfig
+[2026-05-12T17:38:39.170] [DEBUG] debug-file - Incremental task entry:default@ProcessShareConfig pre-execution cost: 2 ms .
+[2026-05-12T17:38:39.170] [DEBUG] debug-file - entry : default@ProcessShareConfig cost memory 0.12224578857421875
+[2026-05-12T17:38:39.170] [INFO] debug-file - UP-TO-DATE :entry:default@ProcessShareConfig...  
+[2026-05-12T17:38:39.171] [DEBUG] debug-file - Executing task :entry:default@ProcessStartupConfig
+[2026-05-12T17:38:39.172] [DEBUG] debug-file - Task 'entry:default@ProcessStartupConfig' cost while wrapping incremental declarations: 1 ms 
+[2026-05-12T17:38:39.172] [DEBUG] debug-file - entry:default@ProcessStartupConfig is not up-to-date, since the output file 'F:\Study\kaiyuan\clone\page-redirection-master\entry\build\default\intermediates\startup\default\startup_config.json' does not exist.
+[2026-05-12T17:38:39.172] [DEBUG] debug-file - Incremental task entry:default@ProcessStartupConfig pre-execution cost: 1 ms .
+[2026-05-12T17:38:39.173] [DEBUG] debug-file - entry : default@ProcessStartupConfig cost memory 0.11556243896484375
+[2026-05-12T17:38:39.173] [DEBUG] debug-file - runTaskFromQueue task cost before running: 23 s 722 ms 
+[2026-05-12T17:38:39.173] [INFO] debug-file - Finished :entry:default@ProcessStartupConfig... after 2 ms 
+[2026-05-12T17:38:39.174] [DEBUG] debug-file - Executing task :entry:default@BuildNativeWithNinja
+[2026-05-12T17:38:39.175] [DEBUG] debug-file - entry : default@BuildNativeWithNinja cost memory 0.024993896484375
+[2026-05-12T17:38:39.175] [DEBUG] debug-file - runTaskFromQueue task cost before running: 23 s 724 ms 
+[2026-05-12T17:38:39.175] [INFO] debug-file - Finished :entry:default@BuildNativeWithNinja... after 1 ms 
+[2026-05-12T17:38:39.177] [DEBUG] debug-file - restool module names: entry; moduleName=entry, taskName=default@ProcessResource
+[2026-05-12T17:38:39.186] [DEBUG] debug-file - Executing task :entry:default@ProcessResource
+[2026-05-12T17:38:39.186] [DEBUG] debug-file - Task 'entry:default@ProcessResource' cost while wrapping incremental declarations: 1 ms 
+[2026-05-12T17:38:39.187] [DEBUG] debug-file - Incremental task entry:default@ProcessResource pre-execution cost: 1 ms .
+[2026-05-12T17:38:39.187] [DEBUG] debug-file - entry : default@ProcessResource cost memory 0.141510009765625
+[2026-05-12T17:38:39.189] [INFO] debug-file - UP-TO-DATE :entry:default@ProcessResource...  
+[2026-05-12T17:38:39.191] [DEBUG] debug-file - Executing task :entry:default@GenerateLoaderJson
+[2026-05-12T17:38:39.191] [DEBUG] debug-file - Task 'entry:default@GenerateLoaderJson' cost while wrapping incremental declarations: 1 ms 
+[2026-05-12T17:38:39.208] [DEBUG] debug-file - Incremental task entry:default@GenerateLoaderJson pre-execution cost: 5 ms .
+[2026-05-12T17:38:39.208] [DEBUG] debug-file - entry : default@GenerateLoaderJson cost memory 0.4911956787109375
+[2026-05-12T17:38:39.211] [INFO] debug-file - UP-TO-DATE :entry:default@GenerateLoaderJson...  
+[2026-05-12T17:38:39.212] [DEBUG] debug-file - Executing task :entry:default@ProcessLibs
+[2026-05-12T17:38:39.214] [DEBUG] debug-file - Incremental task entry:default@ProcessLibs pre-execution cost: 2 ms .
+[2026-05-12T17:38:39.214] [DEBUG] debug-file - entry : default@ProcessLibs cost memory 0.11013031005859375
+[2026-05-12T17:38:39.215] [INFO] debug-file - UP-TO-DATE :entry:default@ProcessLibs...  
+[2026-05-12T17:38:39.215] [DEBUG] debug-file - restool module names: entry; moduleName=entry, taskName=default@CompileResource
+[2026-05-12T17:38:39.216] [DEBUG] debug-file - Executing task :entry:default@CompileResource
+[2026-05-12T17:38:39.244] [DEBUG] debug-file - Incremental task entry:default@CompileResource pre-execution cost: 21 ms .
+[2026-05-12T17:38:39.245] [DEBUG] debug-file - entry : default@CompileResource cost memory 1.1883087158203125
+[2026-05-12T17:38:39.246] [INFO] debug-file - UP-TO-DATE :entry:default@CompileResource...  
+[2026-05-12T17:38:39.247] [DEBUG] debug-file - Executing task :entry:default@DoNativeStrip
+[2026-05-12T17:38:39.247] [DEBUG] debug-file - Task 'entry:default@DoNativeStrip' cost while wrapping incremental declarations: 1 ms 
+[2026-05-12T17:38:39.248] [DEBUG] debug-file - Incremental task entry:default@DoNativeStrip pre-execution cost: 1 ms .
+[2026-05-12T17:38:39.248] [DEBUG] debug-file - entry : default@DoNativeStrip cost memory 0.07895660400390625
+[2026-05-12T17:38:39.248] [INFO] debug-file - UP-TO-DATE :entry:default@DoNativeStrip...  
+[2026-05-12T17:38:39.250] [DEBUG] debug-file - Executing task :entry:default@CompileArkTS
+[2026-05-12T17:38:39.250] [DEBUG] debug-file - obfuscationOptions: undefined
+[2026-05-12T17:38:39.252] [DEBUG] debug-file - Task 'entry:default@CompileArkTS' cost while wrapping incremental declarations: 1 ms 
+[2026-05-12T17:38:39.262] [DEBUG] debug-file - Incremental task entry:default@CompileArkTS pre-execution cost: 10 ms .
+[2026-05-12T17:38:39.263] [DEBUG] debug-file - entry : default@CompileArkTS cost memory 0.822418212890625
+[2026-05-12T17:38:39.264] [INFO] debug-file - UP-TO-DATE :entry:default@CompileArkTS...  
+[2026-05-12T17:38:39.265] [DEBUG] debug-file - Executing task :entry:default@BuildJS
+[2026-05-12T17:38:39.265] [DEBUG] debug-file - Task 'entry:default@BuildJS' cost while wrapping incremental declarations: 1 ms 
+[2026-05-12T17:38:39.267] [DEBUG] debug-file - entry : default@BuildJS cost memory 0.15670013427734375
+[2026-05-12T17:38:39.267] [DEBUG] debug-file - runTaskFromQueue task cost before running: 23 s 817 ms 
+[2026-05-12T17:38:39.267] [INFO] debug-file - Finished :entry:default@BuildJS... after 3 ms 
+[2026-05-12T17:38:39.268] [DEBUG] debug-file - Executing task :entry:default@CacheNativeLibs
+[2026-05-12T17:38:39.269] [DEBUG] debug-file - Task 'entry:default@CacheNativeLibs' cost while wrapping incremental declarations: 1 ms 
+[2026-05-12T17:38:39.270] [DEBUG] debug-file - Incremental task entry:default@CacheNativeLibs pre-execution cost: 2 ms .
+[2026-05-12T17:38:39.270] [DEBUG] debug-file - entry : default@CacheNativeLibs cost memory 0.09709930419921875
+[2026-05-12T17:38:39.270] [INFO] debug-file - UP-TO-DATE :entry:default@CacheNativeLibs...  
+[2026-05-12T17:38:39.272] [DEBUG] debug-file - Executing task :entry:default@GeneratePkgModuleJson
+[2026-05-12T17:38:39.272] [DEBUG] debug-file - File: 'F:\Study\kaiyuan\clone\page-redirection-master\entry\build\default\intermediates\preload\default\preload.json' from 'preloadSoJsonPath' is not exists, just ignore.
+[2026-05-12T17:38:39.272] [DEBUG] debug-file - Error occurs while handling @Input 'shouldDeduplicateHar': The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined
+[2026-05-12T17:38:39.272] [DEBUG] debug-file - Task 'entry:default@GeneratePkgModuleJson' cost while wrapping incremental declarations: 1 ms 
+[2026-05-12T17:38:39.273] [DEBUG] debug-file - Incremental task entry:default@GeneratePkgModuleJson pre-execution cost: 1 ms .
+[2026-05-12T17:38:39.274] [DEBUG] debug-file - entry : default@GeneratePkgModuleJson cost memory 0.10703277587890625
+[2026-05-12T17:38:39.274] [INFO] debug-file - UP-TO-DATE :entry:default@GeneratePkgModuleJson...  
+[2026-05-12T17:38:39.274] [DEBUG] debug-file - Executing task :entry:default@ProcessCompiledResources
+[2026-05-12T17:38:39.274] [DEBUG] debug-file - File: 'F:\Study\kaiyuan\clone\page-redirection-master\entry\build\default\intermediates\preload\default\preload.json' from 'preloadSoJsonPath' is not exists, just ignore.
+[2026-05-12T17:38:39.275] [DEBUG] debug-file - Task 'entry:default@ProcessCompiledResources' cost while wrapping incremental declarations: 1 ms 
+[2026-05-12T17:38:39.275] [DEBUG] debug-file - entry : default@ProcessCompiledResources cost memory 0.0629730224609375
+[2026-05-12T17:38:39.275] [DEBUG] debug-file - runTaskFromQueue task cost before running: 23 s 825 ms 
+[2026-05-12T17:38:39.275] [INFO] debug-file - Finished :entry:default@ProcessCompiledResources... after 1 ms 
+[2026-05-12T17:38:39.277] [DEBUG] debug-file - Executing task :entry:default@PackageHap
+[2026-05-12T17:38:39.287] [DEBUG] debug-file - Incremental task entry:default@PackageHap pre-execution cost: 10 ms .
+[2026-05-12T17:38:39.287] [DEBUG] debug-file - entry : default@PackageHap cost memory -13.82012939453125
+[2026-05-12T17:38:39.288] [INFO] debug-file - UP-TO-DATE :entry:default@PackageHap...  
+[2026-05-12T17:38:39.289] [DEBUG] debug-file - Executing task :entry:default@PackingCheck
+[2026-05-12T17:38:39.296] [DEBUG] debug-file - entry : default@PackingCheck cost memory 0.8444595336914062
+[2026-05-12T17:38:39.296] [DEBUG] debug-file - runTaskFromQueue task cost before running: 23 s 845 ms 
+[2026-05-12T17:38:39.296] [INFO] debug-file - Finished :entry:default@PackingCheck... after 7 ms 
+[2026-05-12T17:38:39.297] [DEBUG] debug-file - Executing task :entry:default@SignHap
+[2026-05-12T17:38:39.297] [WARN] debug-file - Will skip sign 'hos_hap'. No signingConfigs profile is configured in current project.
+             If needed, configure the signingConfigs in F:\Study\kaiyuan\clone\page-redirection-master\build-profile.json5.
+[2026-05-12T17:38:39.298] [DEBUG] debug-file - entry:default@SignHap is not up-to-date, since the output file 'F:\Study\kaiyuan\clone\page-redirection-master\entry\build\default\outputs\default\entry-default-signed.hap' does not exist.
+[2026-05-12T17:38:39.298] [DEBUG] debug-file - Incremental task entry:default@SignHap pre-execution cost: 1 ms .
+[2026-05-12T17:38:39.299] [DEBUG] debug-file - entry : default@SignHap cost memory 0.09352874755859375
+[2026-05-12T17:38:39.299] [DEBUG] debug-file - runTaskFromQueue task cost before running: 23 s 848 ms 
+[2026-05-12T17:38:39.299] [INFO] debug-file - Finished :entry:default@SignHap... after 2 ms 
+[2026-05-12T17:38:39.300] [DEBUG] debug-file - Executing task :entry:default@CollectDebugSymbol
+[2026-05-12T17:38:39.301] [DEBUG] debug-file - entry : default@CollectDebugSymbol cost memory 0.09767913818359375
+[2026-05-12T17:38:39.301] [DEBUG] debug-file - runTaskFromQueue task cost before running: 23 s 851 ms 
+[2026-05-12T17:38:39.301] [INFO] debug-file - Finished :entry:default@CollectDebugSymbol... after 2 ms 
+[2026-05-12T17:38:39.302] [DEBUG] debug-file - Executing task :entry:assembleHap
+[2026-05-12T17:38:39.302] [DEBUG] debug-file - entry : assembleHap cost memory 0.0128326416015625
+[2026-05-12T17:38:39.302] [DEBUG] debug-file - runTaskFromQueue task cost before running: 23 s 851 ms 
+[2026-05-12T17:38:39.302] [INFO] debug-file - Finished :entry:assembleHap... after 1 ms 
+[2026-05-12T17:38:39.310] [INFO] debug-file - BUILD SUCCESSFUL in 23 s 860 ms 
+[2026-05-12T17:38:39.311] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@PreBuild is up-to-date.
+[2026-05-12T17:38:39.311] [DEBUG] debug-file - Update task entry:default@CreateModuleInfo output file:F:\Study\kaiyuan\clone\page-redirection-master\entry\build\default\generated\profile\default\ModuleInfo.ts cache.
+[2026-05-12T17:38:39.312] [DEBUG] debug-file - Incremental task entry:default@CreateModuleInfo post-execution cost:1 ms .
+[2026-05-12T17:38:39.312] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@GenerateMetadata is up-to-date.
+[2026-05-12T17:38:39.312] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@MergeProfile is up-to-date.
+[2026-05-12T17:38:39.312] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@CreateBuildProfile is up-to-date.
+[2026-05-12T17:38:39.312] [DEBUG] debug-file - Update task entry:default@GeneratePkgContextInfo output file:F:\Study\kaiyuan\clone\page-redirection-master\entry\build\default\intermediates\loader\default\pkgContextInfo.json cache.
+[2026-05-12T17:38:39.312] [DEBUG] debug-file - Incremental task entry:default@GeneratePkgContextInfo post-execution cost:1 ms .
+[2026-05-12T17:38:39.312] [DEBUG] debug-file - Update task entry:default@ProcessIntegratedHsp output file:F:\Study\kaiyuan\clone\page-redirection-master\build\cache\default\integrated_hsp\integratedHspCache.json cache.
+[2026-05-12T17:38:39.312] [DEBUG] debug-file - Incremental task entry:default@ProcessIntegratedHsp post-execution cost:1 ms .
+[2026-05-12T17:38:39.313] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@MakePackInfo is up-to-date.
+[2026-05-12T17:38:39.313] [DEBUG] debug-file - Update task entry:default@SyscapTransform input file:F:\Study\kaiyuan\DevEco Studio\sdk\default\openharmony\toolchains\syscap_tool.exe cache by regenerate.
+[2026-05-12T17:38:39.313] [DEBUG] debug-file - Update task entry:default@SyscapTransform input file:F:\Study\kaiyuan\DevEco Studio\sdk\default\openharmony\ets\api\device-define cache by regenerate.
+[2026-05-12T17:38:39.315] [DEBUG] debug-file - Update task entry:default@SyscapTransform output file:F:\Study\kaiyuan\clone\page-redirection-master\entry\build\default\intermediates\syscap\default\rpcid.sc cache.
+[2026-05-12T17:38:39.315] [DEBUG] debug-file - Incremental task entry:default@SyscapTransform post-execution cost:3 ms .
+[2026-05-12T17:38:39.315] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@ProcessProfile is up-to-date.
+[2026-05-12T17:38:39.315] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@ProcessRouterMap is up-to-date.
+[2026-05-12T17:38:39.315] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@ProcessShareConfig is up-to-date.
+[2026-05-12T17:38:39.315] [DEBUG] debug-file - Update task entry:default@ProcessStartupConfig output file:F:\Study\kaiyuan\clone\page-redirection-master\entry\build\default\intermediates\startup\default\startup_config.json cache.
+[2026-05-12T17:38:39.316] [DEBUG] debug-file - Incremental task entry:default@ProcessStartupConfig post-execution cost:1 ms .
+[2026-05-12T17:38:39.316] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@ProcessResource is up-to-date.
+[2026-05-12T17:38:39.316] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@GenerateLoaderJson is up-to-date.
+[2026-05-12T17:38:39.316] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@ProcessLibs is up-to-date.
+[2026-05-12T17:38:39.316] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@CompileResource is up-to-date.
+[2026-05-12T17:38:39.316] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@DoNativeStrip is up-to-date.
+[2026-05-12T17:38:39.316] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@CompileArkTS is up-to-date.
+[2026-05-12T17:38:39.317] [DEBUG] debug-file - Update task entry:default@BuildJS input file:F:\Study\kaiyuan\clone\page-redirection-master\entry\build\default\intermediates\loader\default cache by regenerate.
+[2026-05-12T17:38:39.318] [DEBUG] debug-file - Update task entry:default@BuildJS input file:F:\Study\kaiyuan\clone\page-redirection-master\entry\build\default\intermediates\res\default\resources\rawfile cache by regenerate.
+[2026-05-12T17:38:39.321] [DEBUG] debug-file - Update task entry:default@BuildJS input file:F:\Study\kaiyuan\clone\page-redirection-master\entry\build\default\intermediates\res\default\ResourceTable.txt cache by regenerate.
+[2026-05-12T17:38:39.321] [DEBUG] debug-file - Update task entry:default@BuildJS input file:F:\Study\kaiyuan\clone\page-redirection-master\entry\build\default\intermediates\res\default\ark_module.json cache by regenerate.
+[2026-05-12T17:38:39.322] [DEBUG] debug-file - Update task entry:default@BuildJS input file:F:\Study\kaiyuan\clone\page-redirection-master\entry\build\default\intermediates\res\default\resources\base\profile cache by regenerate.
+[2026-05-12T17:38:39.322] [DEBUG] debug-file - Update task entry:default@BuildJS output file:F:\Study\kaiyuan\clone\page-redirection-master\entry\build\default\intermediates\loader_out\default\js cache.
+[2026-05-12T17:38:39.322] [DEBUG] debug-file - Incremental task entry:default@BuildJS post-execution cost:6 ms .
+[2026-05-12T17:38:39.322] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@CacheNativeLibs is up-to-date.
+[2026-05-12T17:38:39.323] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@GeneratePkgModuleJson is up-to-date.
+[2026-05-12T17:38:39.323] [DEBUG] debug-file - Incremental task entry:default@ProcessCompiledResources post-execution cost:1 ms .
+[2026-05-12T17:38:39.323] [DEBUG] debug-file - There is no need to refresh cache, since the incremental task entry:default@PackageHap is up-to-date.
+[2026-05-12T17:38:39.323] [DEBUG] debug-file - Update task entry:default@SignHap input file:F:\Study\kaiyuan\clone\page-redirection-master\entry\build\default\outputs\default\entry-default-unsigned.hap cache by regenerate.
+[2026-05-12T17:38:39.323] [DEBUG] debug-file - Update task entry:default@SignHap output file:F:\Study\kaiyuan\clone\page-redirection-master\entry\build\default\outputs\default\entry-default-signed.hap cache.
+[2026-05-12T17:38:39.323] [DEBUG] debug-file - Incremental task entry:default@SignHap post-execution cost:1 ms .
+[2026-05-12T17:38:39.324] [DEBUG] debug-file - Update task entry:default@CollectDebugSymbol input file:F:\Study\kaiyuan\clone\page-redirection-master\entry\build\default\intermediates\loader_out\default\ets\sourceMaps.map cache by regenerate.
+[2026-05-12T17:38:39.324] [DEBUG] debug-file - Update task entry:default@CollectDebugSymbol input file:F:\Study\kaiyuan\clone\page-redirection-master\entry\build\default\intermediates\libs\default cache by regenerate.
+[2026-05-12T17:38:39.324] [DEBUG] debug-file - Update task entry:default@CollectDebugSymbol output file:F:\Study\kaiyuan\clone\page-redirection-master\entry\build\default\outputs\default\symbol cache.
+[2026-05-12T17:38:39.324] [DEBUG] debug-file - Incremental task entry:default@CollectDebugSymbol post-execution cost:2 ms .
+[2026-05-12T17:38:39.346] [DEBUG] debug-file - Cleanup worker 0.
+[2026-05-12T17:38:39.346] [DEBUG] debug-file - Worker 0 has been cleaned up.
+[2026-05-12T17:38:39.346] [DEBUG] debug-file - Current idle worker size: 1.
+[2026-05-12T17:38:39.346] [DEBUG] debug-file - Current resident worker size: 2.
+[2026-05-12T17:38:39.346] [DEBUG] debug-file - Cleanup worker 1.
+[2026-05-12T17:38:39.346] [DEBUG] debug-file - Worker 1 has been cleaned up.
+[2026-05-12T17:38:39.347] [DEBUG] debug-file - Current idle worker size: 0.
+[2026-05-12T17:38:39.347] [DEBUG] debug-file - Current resident worker size: 2.
+[2026-05-12T17:38:39.348] [DEBUG] debug-file - hvigor build process will be closed.
+[2026-05-12T17:38:39.350] [DEBUG] debug-file - worker[0] exits with exit code 1.
+[2026-05-12T17:38:39.352] [DEBUG] debug-file - session manager: send message to worker process.
+[2026-05-12T17:38:39.352] [DEBUG] debug-file - session manager: send message to worker process.
+[2026-05-12T17:38:39.353] [DEBUG] debug-file - watch worker: worker id should be larger than 0. Nothing will be sent to any worker thread.
+[2026-05-12T17:38:39.354] [DEBUG] debug-file - watch worker: worker id should be larger than 0. Nothing will be sent to any worker thread.
+[2026-05-12T17:38:39.356] [DEBUG] debug-file - worker[1] exits with exit code 1.
