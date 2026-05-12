@@ -7,6 +7,11 @@ string dollar 0x01000006
 string invoice 0x01000007
 string module_desc 0x01000008
 string personal_invoice 0x01000009
+string purchase_prompt 0x0100003a
+string retreat_option1 0x0100003b
+string retreat_option2 0x0100003c
+string retreat_prompt 0x0100003d
+string retreat_title 0x0100003e
 string self_operated 0x0100000a
 string standard_delivery 0x0100000b
 string toast_msg 0x0100000c

@@ -231,5 +231,25 @@
 			"type":	"profile",
 			"name":	"main_pages",
 			"id":	"0x01000039"
+		}, {
+			"type":	"string",
+			"name":	"purchase_prompt",
+			"id":	"0x0100003A"
+		}, {
+			"type":	"string",
+			"name":	"retreat_option1",
+			"id":	"0x0100003B"
+		}, {
+			"type":	"string",
+			"name":	"retreat_option2",
+			"id":	"0x0100003C"
+		}, {
+			"type":	"string",
+			"name":	"retreat_prompt",
+			"id":	"0x0100003D"
+		}, {
+			"type":	"string",
+			"name":	"retreat_title",
+			"id":	"0x0100003E"
 		}]
 }

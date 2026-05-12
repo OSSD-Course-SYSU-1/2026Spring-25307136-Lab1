@@ -17,6 +17,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { CommonConstants } from '../common/constants/CommonConstants';
 import Logger from '../common/utils/Logger';
 import ProductModel from '../model/ProductModel';
+import { common } from '@kit.AbilityKit';
 
 const TAG: string = 'OrderConfirmPage';
 
@@ -35,6 +36,63 @@ struct OrderConfirmPage {
   sliderBarHeight: number = (this.getUIContext().getRouter().getParams() as Record<string, number>)['sliderBarHeight'];
   productDetail: ProductModel =
     JSON.parse((this.getUIContext().getRouter().getParams() as Record<string, string>)['detailStr']) as ProductModel;
+
+  showSecondDialog(): void {
+    try {
+      this.getUIContext().getPromptAction().showDialog({
+        title: $r('app.string.retreat_title'),
+        message: $r('app.string.retreat_prompt'),
+        buttons: [
+          {
+            text: $r('app.string.retreat_option1'),
+            color: '#007DFF'
+          },
+          {
+            text: $r('app.string.retreat_option2'),
+            color: '#666666'
+          }
+        ]
+      }).then((response) => {
+        if (response.index === 0) {
+          // 用户点击"......."，返回最开始界面
+          Logger.info(TAG, '用户选择了"......."，返回最开始界面');
+          this.getUIContext().getRouter().clear();
+          this.getUIContext().getRouter().pushUrl({
+            url: 'pages/IndexPage'
+          });
+        } else if (response.index === 1) {
+          // 用户点击"你玩我是吧？"，应用停止运行
+          Logger.info(TAG, '用户选择了"你玩我是吧？"，应用停止运行');
+          // 使用UIAbilityContext.terminateSelf()终止应用
+          try {
+            const abilityContext = getContext(this) as common.UIAbilityContext;
+            if (abilityContext && typeof abilityContext.terminateSelf === 'function') {
+              abilityContext.terminateSelf();
+            } else {
+              // 如果无法获取abilityContext或terminateSelf方法，则清除所有页面栈
+              Logger.warn(TAG, '无法获取UIAbilityContext，使用router.clear()清除页面栈');
+              this.getUIContext().getRouter().clear();
+            }
+          } catch (error) {
+            Logger.error(TAG, `Failed to terminate app: ${JSON.stringify(error)}`);
+            // 如果终止失败，至少清除页面栈
+            try {
+              this.getUIContext().getRouter().clear();
+            } catch (routerError) {
+              Logger.error(TAG, `Failed to clear router: ${JSON.stringify(routerError)}`);
+            }
+          }
+        }
+      }).catch((error: BusinessError) => {
+        Logger.error(TAG, `Failed to show second dialog. Cause: code=${error.code}, message=${error.message}`);
+      });
+    } catch (exception) {
+      let error = exception as BusinessError;
+      Logger.error(TAG, `Failed to show second dialog. Cause: code=${error.code}, message=${error.message}`);
+    }
+  }
+
+
 
   build() {
     Column() {
@@ -199,13 +257,36 @@ struct OrderConfirmPage {
           })
           .onClick(() => {
             try {
-              this.getUIContext().getPromptAction().showToast({
-                message: $r('app.string.toast_msg'),
-                duration: CommonConstants.TOAST_DURATION
+              this.getUIContext().getPromptAction().showDialog({
+                title: $r('app.string.confirm_order'),
+                message: $r('app.string.purchase_prompt'),
+                buttons: [
+                  {
+                    text: '彳亍',
+                    color: '#007DFF'
+                  },
+                  {
+                    text: '有的是',
+                    color: '#666666'
+                  }
+                ]
+              }).then((response) => {
+                if (response.index === 0) {
+                  // 用户点击"彳亍"后的操作
+                  Logger.info(TAG, '用户选择了"彳亍"');
+                  // 显示第二个对话框
+                  this.showSecondDialog();
+                } else if (response.index === 1) {
+                  // 用户点击"有的是"后的操作
+                  Logger.info(TAG, '用户选择了"有的是"');
+                  // 这里可以添加其他操作，如果需要的话
+                }
+              }).catch((error: BusinessError) => {
+                Logger.error(TAG, `Failed to show dialog. Cause: code=${error.code}, message=${error.message}`);
               });
             } catch (exception) {
               let error = exception as BusinessError;
-              Logger.error(TAG, `Failed to show toast. Cause: code=${error.code}, message=${error.message}`);
+              Logger.error(TAG, `Failed to show dialog. Cause: code=${error.code}, message=${error.message}`);
             }
           })
       }

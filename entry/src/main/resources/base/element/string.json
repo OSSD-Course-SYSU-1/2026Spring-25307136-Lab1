@@ -55,6 +55,27 @@
     {
       "name": "user_address",
       "value": "Room XX, Unit XX, XX Building, XXX Community, Haidian District, Beijing"
+    },
+    {
+      "name": "purchase_prompt",
+      "value": "有钱吗你就买"
+    },
+    {
+      "name": "retreat_prompt",
+      "value": "真就退缩了？"
+    },
+    {
+      "name": "retreat_title",
+      "value": "提示"
+    },
+    {
+      "name": "retreat_option1",
+      "value": "......."
+    },
+    {
+      "name": "retreat_option2",
+      "value": "你玩我是吧？"
     }
+
   ]
 }

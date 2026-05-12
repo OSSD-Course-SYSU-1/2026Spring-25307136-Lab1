@@ -10,6 +10,7 @@ import type { BusinessError } from "@ohos:base";
 import { CommonConstants } from "@bundle:com.example.pageredirection/entry/ets/common/constants/CommonConstants";
 import Logger from "@bundle:com.example.pageredirection/entry/ets/common/utils/Logger";
 import type ProductModel from '../model/ProductModel';
+import type common from "@ohos:app.ability.common";
 const TAG: string = 'OrderConfirmPage';
 function __Text__titleStyle(): void {
     Text.fontSize({ "id": 16777246, "type": 10002, params: [], "bundleName": "com.example.pageredirection", "moduleName": "entry" });
@@ -51,6 +52,65 @@ class OrderConfirmPage extends ViewPU {
     private statusBarHeight: number;
     private sliderBarHeight: number;
     private productDetail: ProductModel;
+    showSecondDialog(): void {
+        try {
+            this.getUIContext().getPromptAction().showDialog({
+                title: { "id": 16777278, "type": 10003, params: [], "bundleName": "com.example.pageredirection", "moduleName": "entry" },
+                message: { "id": 16777277, "type": 10003, params: [], "bundleName": "com.example.pageredirection", "moduleName": "entry" },
+                buttons: [
+                    {
+                        text: { "id": 16777275, "type": 10003, params: [], "bundleName": "com.example.pageredirection", "moduleName": "entry" },
+                        color: '#007DFF'
+                    },
+                    {
+                        text: { "id": 16777276, "type": 10003, params: [], "bundleName": "com.example.pageredirection", "moduleName": "entry" },
+                        color: '#666666'
+                    }
+                ]
+            }).then((response) => {
+                if (response.index === 0) {
+                    // 用户点击"......."，返回最开始界面
+                    Logger.info(TAG, '用户选择了"......."，返回最开始界面');
+                    this.getUIContext().getRouter().clear();
+                    this.getUIContext().getRouter().pushUrl({
+                        url: 'pages/IndexPage'
+                    });
+                }
+                else if (response.index === 1) {
+                    // 用户点击"你玩我是吧？"，应用停止运行
+                    Logger.info(TAG, '用户选择了"你玩我是吧？"，应用停止运行');
+                    // 使用UIAbilityContext.terminateSelf()终止应用
+                    try {
+                        const abilityContext = getContext(this) as common.UIAbilityContext;
+                        if (abilityContext && typeof abilityContext.terminateSelf === 'function') {
+                            abilityContext.terminateSelf();
+                        }
+                        else {
+                            // 如果无法获取abilityContext或terminateSelf方法，则清除所有页面栈
+                            Logger.warn(TAG, '无法获取UIAbilityContext，使用router.clear()清除页面栈');
+                            this.getUIContext().getRouter().clear();
+                        }
+                    }
+                    catch (error) {
+                        Logger.error(TAG, `Failed to terminate app: ${JSON.stringify(error)}`);
+                        // 如果终止失败，至少清除页面栈
+                        try {
+                            this.getUIContext().getRouter().clear();
+                        }
+                        catch (routerError) {
+                            Logger.error(TAG, `Failed to clear router: ${JSON.stringify(routerError)}`);
+                        }
+                    }
+                }
+            }).catch((error: BusinessError) => {
+                Logger.error(TAG, `Failed to show second dialog. Cause: code=${error.code}, message=${error.message}`);
+            });
+        }
+        catch (exception) {
+            let error = exception as BusinessError;
+            Logger.error(TAG, `Failed to show second dialog. Cause: code=${error.code}, message=${error.message}`);
+        }
+    }
     initialRender() {
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Column.create();
@@ -309,14 +369,38 @@ class OrderConfirmPage extends ViewPU {
             });
             Button.onClick(() => {
                 try {
-                    this.getUIContext().getPromptAction().showToast({
-                        message: { "id": 16777228, "type": 10003, params: [], "bundleName": "com.example.pageredirection", "moduleName": "entry" },
-                        duration: CommonConstants.TOAST_DURATION
+                    this.getUIContext().getPromptAction().showDialog({
+                        title: { "id": 16777220, "type": 10003, params: [], "bundleName": "com.example.pageredirection", "moduleName": "entry" },
+                        message: { "id": 16777274, "type": 10003, params: [], "bundleName": "com.example.pageredirection", "moduleName": "entry" },
+                        buttons: [
+                            {
+                                text: '彳亍',
+                                color: '#007DFF'
+                            },
+                            {
+                                text: '有的是',
+                                color: '#666666'
+                            }
+                        ]
+                    }).then((response) => {
+                        if (response.index === 0) {
+                            // 用户点击"彳亍"后的操作
+                            Logger.info(TAG, '用户选择了"彳亍"');
+                            // 显示第二个对话框
+                            this.showSecondDialog();
+                        }
+                        else if (response.index === 1) {
+                            // 用户点击"有的是"后的操作
+                            Logger.info(TAG, '用户选择了"有的是"');
+                            // 这里可以添加其他操作，如果需要的话
+                        }
+                    }).catch((error: BusinessError) => {
+                        Logger.error(TAG, `Failed to show dialog. Cause: code=${error.code}, message=${error.message}`);
                     });
                 }
                 catch (exception) {
                     let error = exception as BusinessError;
-                    Logger.error(TAG, `Failed to show toast. Cause: code=${error.code}, message=${error.message}`);
+                    Logger.error(TAG, `Failed to show dialog. Cause: code=${error.code}, message=${error.message}`);
                 }
             });
         }, Button);

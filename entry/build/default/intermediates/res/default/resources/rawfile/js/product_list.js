@@ -58,3 +58,5 @@ addDocument();
 function jumpDetail(index) {
   window.location.href = 'product_detail.html?index=' + index;
 }
+
+
