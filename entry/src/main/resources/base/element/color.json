@@ -27,6 +27,10 @@
     {
       "name": "button_end",
       "value": "#EB344D"
+    },
+    {
+      "name": "compare_btn_bg",
+      "value": "#F64D43"
     }
   ]
 }

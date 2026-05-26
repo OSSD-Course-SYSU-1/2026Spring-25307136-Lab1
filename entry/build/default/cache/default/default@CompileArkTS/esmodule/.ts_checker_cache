@@ -41,6 +41,7 @@
         "F:\\Study\\kaiyuan\\clone\\page-redirection-master\\entry\\src\\main\\ets\\pages\\IndexPage.ets",
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\folder_stack.d.ts",
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\nav_destination.d.ts",
+        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\navigation.d.ts"
       ],
       "error": false
     },
@@ -108,6 +109,7 @@
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\ability\\startAbilityParameter.d.ts",
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.bundle.d.ts",
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\application\\AppServiceExtensionContext.d.ts",
+        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\embedded_component.d.ts"
       ],
       "error": false
     },
@@ -227,6 +229,7 @@
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\nav_destination.d.ts",
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\navigation.d.ts",
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\pattern_lock.d.ts",
+        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\video.d.ts"
       ],
       "error": false
     },
@@ -446,6 +449,7 @@
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\application\\Context.d.ts",
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.app.ability.common.d.ts",
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\app\\context.d.ts",
+        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.data.rdb.d.ts"
       ],
       "error": false
     },
@@ -470,6 +474,7 @@
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\application\\PhotoEditorExtensionContext.d.ts",
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.multimodalInput.pointer.d.ts",
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.web.webview.d.ts",
+        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\common.d.ts"
       ],
       "error": false
     },
@@ -501,6 +506,7 @@
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\arkui\\ComponentContent.d.ts",
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\arkui\\NodeController.d.ts",
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\arkui\\XComponentNode.d.ts",
+        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\common.d.ts"
       ],
       "error": false
     },
@@ -527,6 +533,7 @@
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.window.d.ts",
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.arkui.UIContext.d.ts",
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\content_slot.d.ts",
+        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\node_container.d.ts"
       ],
       "error": false
     },
@@ -535,6 +542,7 @@
       "children": [],
       "parent": [
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.multimedia.image.d.ts",
+        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.graphics.drawing.d.ts"
       ],
       "error": false
     },
@@ -568,6 +576,7 @@
       "parent": [
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.resourceManager.d.ts",
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\image.d.ts",
+        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\tab_content.d.ts"
       ],
       "error": false
     },
@@ -575,6 +584,7 @@
       "mtimeMs": 1774582692000,
       "children": [],
       "parent": [
+        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.arkui.UIContext.d.ts"
       ],
       "error": false
     },
@@ -584,6 +594,7 @@
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.base.d.ts"
       ],
       "parent": [
+        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.arkui.UIContext.d.ts"
       ],
       "error": false
     },
@@ -593,6 +604,7 @@
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.base.d.ts"
       ],
       "parent": [
+        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.arkui.UIContext.d.ts"
       ],
       "error": false
     },
@@ -606,6 +618,7 @@
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\action_sheet.d.ts",
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\alert_dialog.d.ts",
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\common.d.ts",
+        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\custom_dialog_controller.d.ts"
       ],
       "error": false
     },
@@ -615,6 +628,7 @@
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.base.d.ts"
       ],
       "parent": [
+        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.arkui.UIContext.d.ts"
       ],
       "error": false
     },
@@ -622,6 +636,7 @@
       "mtimeMs": 1774582692000,
       "children": [],
       "parent": [
+        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.arkui.UIContext.d.ts"
       ],
       "error": false
     },
@@ -629,6 +644,7 @@
       "mtimeMs": 1774582692000,
       "children": [],
       "parent": [
+        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.arkui.UIContext.d.ts"
       ],
       "error": false
     },
@@ -641,6 +657,7 @@
       ],
       "parent": [
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.arkui.UIContext.d.ts",
+        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\common.d.ts"
       ],
       "error": false
     },
@@ -648,6 +665,7 @@
       "mtimeMs": 1774582692000,
       "children": [],
       "parent": [
+        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.arkui.UIContext.d.ts"
       ],
       "error": false
     },
@@ -658,6 +676,7 @@
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.multimedia.image.d.ts"
       ],
       "parent": [
+        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.arkui.UIContext.d.ts"
       ],
       "error": false
     },
@@ -669,6 +688,7 @@
       ],
       "parent": [
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.arkui.UIContext.d.ts",
+        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\common.d.ts"
       ],
       "error": false
     },
@@ -698,6 +718,7 @@
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\ability\\abilityResult.d.ts"
       ],
       "parent": [
+        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.arkui.UIContext.d.ts"
       ],
       "error": false
     },
@@ -735,6 +756,7 @@
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\arkui\\Graphics.d.ts"
       ],
       "parent": [
+        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.arkui.node.d.ts"
       ],
       "error": false
     },
@@ -754,6 +776,7 @@
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\arkui\\NodeController.d.ts",
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\arkui\\XComponentNode.d.ts",
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\arkui\\NodeContent.d.ts",
+        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\canvas.d.ts"
       ],
       "error": false
     },
@@ -907,6 +930,7 @@
       ],
       "parent": [
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\application\\UIAbilityContext.d.ts",
+        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\application\\UIExtensionContext.d.ts"
       ],
       "error": false
     },
@@ -1021,6 +1045,7 @@
       "children": [],
       "parent": [
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.app.ability.StartOptions.d.ts",
+        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\application\\Context.d.ts"
       ],
       "error": false
     },
@@ -1505,6 +1530,7 @@
       "error": false
     },
     "F:\\Study\\kaiyuan\\clone\\page-redirection-master\\entry\\src\\main\\ets\\model\\ProductModel.ets": {
+      "mtimeMs": 1779788357810.4336,
       "children": [],
       "parent": [
         "F:\\Study\\kaiyuan\\clone\\page-redirection-master\\entry\\src\\main\\ets\\pages\\IndexPage.ets",
@@ -1513,6 +1539,7 @@
       "error": false
     },
     "F:\\Study\\kaiyuan\\clone\\page-redirection-master\\entry\\src\\main\\ets\\pages\\IndexPage.ets": {
+      "mtimeMs": 1779788350610.5315,
       "children": [
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.base.d.ts",
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.web.webview.d.ts",
@@ -1565,12 +1592,15 @@
       "error": false
     },
     "F:\\Study\\kaiyuan\\clone\\page-redirection-master\\entry\\src\\main\\ets\\pages\\OrderConfirmPage.ets": {
+      "mtimeMs": 1779788352631.7053,
       "children": [
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.base.d.ts",
         "F:\\Study\\kaiyuan\\clone\\page-redirection-master\\entry\\src\\main\\ets\\common\\constants\\CommonConstants.ets",
         "F:\\Study\\kaiyuan\\clone\\page-redirection-master\\entry\\src\\main\\ets\\common\\utils\\Logger.ets",
+        "F:\\Study\\kaiyuan\\clone\\page-redirection-master\\entry\\src\\main\\ets\\model\\ProductModel.ets"
       ],
       "parent": [],
+      "error": false
     },
     "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\action_sheet.d.ts": {
       "mtimeMs": 1774582692000,
@@ -1618,6 +1648,7 @@
       "mtimeMs": 1774582692000,
       "children": [],
       "parent": [
+        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\common.d.ts"
       ],
       "error": false
     },
@@ -1625,6 +1656,7 @@
       "mtimeMs": 1774582692000,
       "children": [],
       "parent": [
+        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\common.d.ts"
       ],
       "error": false
     },
@@ -1632,6 +1664,7 @@
       "mtimeMs": 1774582692000,
       "children": [],
       "parent": [
+        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\common.d.ts"
       ],
       "error": false
     },
@@ -1640,6 +1673,7 @@
       "children": [],
       "parent": [
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\common.d.ts",
+        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\image.d.ts"
       ],
       "error": false
     },
@@ -1656,6 +1690,7 @@
       "children": [],
       "parent": [
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\common.d.ts",
+        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\with_theme.d.ts"
       ],
       "error": false
     },
@@ -1874,6 +1909,7 @@
       "mtimeMs": 1774582692000,
       "children": [],
       "parent": [
+        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\build-tools\\ets-loader\\declarations\\tabs.d.ts"
       ],
       "error": false
     },
