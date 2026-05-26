@@ -2,6 +2,7 @@ if (!("finalizeConstruction" in ViewPU.prototype)) {
     Reflect.set(ViewPU.prototype, "finalizeConstruction", () => { });
 }
 interface OrderConfirmPage_Params {
+    currentBreakpoint?: string;
     statusBarHeight?: number;
     sliderBarHeight?: number;
     productDetail?: ProductModel;
@@ -10,6 +11,7 @@ import type { BusinessError } from "@ohos:base";
 import { CommonConstants } from "@bundle:com.example.pageredirection/entry/ets/common/constants/CommonConstants";
 import Logger from "@bundle:com.example.pageredirection/entry/ets/common/utils/Logger";
 import type ProductModel from '../model/ProductModel';
+import { BreakpointConstants } from "@bundle:com.example.pageredirection/entry/ets/common/utils/BreakpointSystem";
 const TAG: string = 'OrderConfirmPage';
 function __Text__titleStyle(): void {
     Text.fontSize({ "id": 16777246, "type": 10002, params: [], "bundleName": "com.example.pageredirection", "moduleName": "entry" });
@@ -23,6 +25,7 @@ class OrderConfirmPage extends ViewPU {
         if (typeof paramsLambda === "function") {
             this.paramsGenerator_ = paramsLambda;
         }
+        this.__currentBreakpoint = this.createStorageProp('currentBreakpoint', BreakpointConstants.BREAKPOINT_SM, "currentBreakpoint");
         this.statusBarHeight = (this.getUIContext().getRouter().getParams() as Record<string, number>)['statusBarHeight'];
         this.sliderBarHeight = (this.getUIContext().getRouter().getParams() as Record<string, number>)['sliderBarHeight'];
         this.productDetail = JSON.parse((this.getUIContext().getRouter().getParams() as Record<string, string>)['detailStr']) as ProductModel;
@@ -43,10 +46,19 @@ class OrderConfirmPage extends ViewPU {
     updateStateVars(params: OrderConfirmPage_Params) {
     }
     purgeVariableDependenciesOnElmtId(rmElmtId) {
+        this.__currentBreakpoint.purgeDependencyOnElmtId(rmElmtId);
     }
     aboutToBeDeleted() {
+        this.__currentBreakpoint.aboutToBeDeleted();
         SubscriberManager.Get().delete(this.id__());
         this.aboutToBeDeletedInternal();
+    }
+    private __currentBreakpoint: ObservedPropertyAbstractPU<string>;
+    get currentBreakpoint() {
+        return this.__currentBreakpoint.get();
+    }
+    set currentBreakpoint(newValue: string) {
+        this.__currentBreakpoint.set(newValue);
     }
     private statusBarHeight: number;
     private sliderBarHeight: number;
@@ -59,8 +71,8 @@ class OrderConfirmPage extends ViewPU {
             Column.backgroundColor({ "id": 16777234, "type": 10001, params: [], "bundleName": "com.example.pageredirection", "moduleName": "entry" });
             Column.padding({
                 top: this.statusBarHeight,
-                left: { "id": 16777254, "type": 10002, params: [], "bundleName": "com.example.pageredirection", "moduleName": "entry" },
-                right: { "id": 16777254, "type": 10002, params: [], "bundleName": "com.example.pageredirection", "moduleName": "entry" },
+                left: this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? { "id": 16777249, "type": 10002, params: [], "bundleName": "com.example.pageredirection", "moduleName": "entry" } : { "id": 16777254, "type": 10002, params: [], "bundleName": "com.example.pageredirection", "moduleName": "entry" },
+                right: this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? { "id": 16777249, "type": 10002, params: [], "bundleName": "com.example.pageredirection", "moduleName": "entry" } : { "id": 16777254, "type": 10002, params: [], "bundleName": "com.example.pageredirection", "moduleName": "entry" },
                 bottom: this.sliderBarHeight
             });
         }, Column);
@@ -284,6 +296,7 @@ class OrderConfirmPage extends ViewPU {
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Row.create();
+            Row.layoutWeight(1);
         }, Row);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Text.create({ "id": 16777222, "type": 10003, params: [''], "bundleName": "com.example.pageredirection", "moduleName": "entry" });
@@ -302,7 +315,8 @@ class OrderConfirmPage extends ViewPU {
         Row.pop();
         this.observeComponentCreation2((elmtId, isInitialRender) => {
             Button.createWithLabel({ "id": 16777220, "type": 10003, params: [], "bundleName": "com.example.pageredirection", "moduleName": "entry" });
-            Button.width(CommonConstants.PERCENT_50);
+            Button.width(this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? '40%' : CommonConstants.PERCENT_50);
+            Button.height(this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? 52 : undefined);
             Button.linearGradient({
                 angle: 90,
                 colors: [[{ "id": 16777233, "type": 10001, params: [], "bundleName": "com.example.pageredirection", "moduleName": "entry" }, 0.11], [{ "id": 16777232, "type": 10001, params: [], "bundleName": "com.example.pageredirection", "moduleName": "entry" }, 0.89]]

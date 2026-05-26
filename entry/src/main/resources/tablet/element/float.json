@@ -1,0 +1,92 @@
+{
+  "float": [
+    {
+      "name": "font_size_sm",
+      "value": "13fp"
+    },
+    {
+      "name": "line_height_sm",
+      "value": "18vp"
+    },
+    {
+      "name": "font_size_mm",
+      "value": "16fp"
+    },
+    {
+      "name": "line_height_mm",
+      "value": "22vp"
+    },
+    {
+      "name": "font_size_md",
+      "value": "20fp"
+    },
+    {
+      "name": "font_size_lg",
+      "value": "24fp"
+    },
+    {
+      "name": "font_size_llg",
+      "value": "28fp"
+    },
+    {
+      "name": "more_img_width",
+      "value": "8vp"
+    },
+    {
+      "name": "more_img_height",
+      "value": "14vp"
+    },
+    {
+      "name": "location_img_size",
+      "value": "22vp"
+    },
+    {
+      "name": "ext_item_height",
+      "value": "24vp"
+    },
+    {
+      "name": "img_size",
+      "value": "28vp"
+    },
+    {
+      "name": "btn_size",
+      "value": "36vp"
+    },
+    {
+      "name": "navi_height",
+      "value": "64vp"
+    },
+    {
+      "name": "location_info_height",
+      "value": "76vp"
+    },
+    {
+      "name": "product_size",
+      "value": "100vp"
+    },
+    {
+      "name": "ss_padding_margin",
+      "value": "6vp"
+    },
+    {
+      "name": "sm_padding_margin",
+      "value": "12vp"
+    },
+    {
+      "name": "md_padding_margin",
+      "value": "16vp"
+    },
+    {
+      "name": "lg_padding_margin",
+      "value": "20vp"
+    },
+    {
+      "name": "border_radius",
+      "value": "20vp"
+    },
+    {
+      "name": "confirm_button_margin_bottom",
+      "value": "14vp"
+    }
+  ]
+}

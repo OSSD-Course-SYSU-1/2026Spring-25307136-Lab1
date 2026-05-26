@@ -594,7 +594,8 @@
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.base.d.ts"
       ],
       "parent": [
-        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.arkui.UIContext.d.ts"
+        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.arkui.UIContext.d.ts",
+        "F:\\Study\\kaiyuan\\clone\\page-redirection-master\\entry\\src\\main\\ets\\common\\utils\\BreakpointSystem.ets"
       ],
       "error": false
     },
@@ -1538,15 +1539,30 @@
       ],
       "error": false
     },
+    "F:\\Study\\kaiyuan\\clone\\page-redirection-master\\entry\\src\\main\\ets\\common\\utils\\BreakpointSystem.ets": {
+      "mtimeMs": 1779789599281.5735,
+      "children": [
+        "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.mediaquery.d.ts"
+      ],
+      "parent": [
+        "F:\\Study\\kaiyuan\\clone\\page-redirection-master\\entry\\src\\main\\ets\\pages\\IndexPage.ets",
+        "F:\\Study\\kaiyuan\\clone\\page-redirection-master\\entry\\src\\main\\ets\\pages\\OrderConfirmPage.ets"
+      ],
+      "error": true,
+      "errorCodes": [
+        28007
+      ]
+    },
     "F:\\Study\\kaiyuan\\clone\\page-redirection-master\\entry\\src\\main\\ets\\pages\\IndexPage.ets": {
-      "mtimeMs": 1779788350610.5315,
+      "mtimeMs": 1779789775956.1128,
       "children": [
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.base.d.ts",
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.web.webview.d.ts",
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.window.d.ts",
         "F:\\Study\\kaiyuan\\clone\\page-redirection-master\\entry\\src\\main\\ets\\common\\utils\\Logger.ets",
         "F:\\Study\\kaiyuan\\clone\\page-redirection-master\\entry\\src\\main\\ets\\common\\constants\\CommonConstants.ets",
-        "F:\\Study\\kaiyuan\\clone\\page-redirection-master\\entry\\src\\main\\ets\\model\\ProductModel.ets"
+        "F:\\Study\\kaiyuan\\clone\\page-redirection-master\\entry\\src\\main\\ets\\model\\ProductModel.ets",
+        "F:\\Study\\kaiyuan\\clone\\page-redirection-master\\entry\\src\\main\\ets\\common\\utils\\BreakpointSystem.ets"
       ],
       "parent": [],
       "error": false
@@ -1592,12 +1608,13 @@
       "error": false
     },
     "F:\\Study\\kaiyuan\\clone\\page-redirection-master\\entry\\src\\main\\ets\\pages\\OrderConfirmPage.ets": {
-      "mtimeMs": 1779788352631.7053,
+      "mtimeMs": 1779789719546.8374,
       "children": [
         "F:\\Study\\kaiyuan\\DevEco Studio\\sdk\\default\\openharmony\\ets\\api\\@ohos.base.d.ts",
         "F:\\Study\\kaiyuan\\clone\\page-redirection-master\\entry\\src\\main\\ets\\common\\constants\\CommonConstants.ets",
         "F:\\Study\\kaiyuan\\clone\\page-redirection-master\\entry\\src\\main\\ets\\common\\utils\\Logger.ets",
-        "F:\\Study\\kaiyuan\\clone\\page-redirection-master\\entry\\src\\main\\ets\\model\\ProductModel.ets"
+        "F:\\Study\\kaiyuan\\clone\\page-redirection-master\\entry\\src\\main\\ets\\model\\ProductModel.ets",
+        "F:\\Study\\kaiyuan\\clone\\page-redirection-master\\entry\\src\\main\\ets\\common\\utils\\BreakpointSystem.ets"
       ],
       "parent": [],
       "error": false

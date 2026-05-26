@@ -17,6 +17,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { CommonConstants } from '../common/constants/CommonConstants';
 import Logger from '../common/utils/Logger';
 import ProductModel from '../model/ProductModel';
+import { BreakpointConstants } from '../common/utils/BreakpointSystem';
 
 const TAG: string = 'OrderConfirmPage';
 
@@ -31,6 +32,7 @@ function titleStyle() {
 @Entry
 @Component
 struct OrderConfirmPage {
+  @StorageProp('currentBreakpoint') currentBreakpoint: string = BreakpointConstants.BREAKPOINT_SM;
   statusBarHeight: number = (this.getUIContext().getRouter().getParams() as Record<string, number>)['statusBarHeight'];
   sliderBarHeight: number = (this.getUIContext().getRouter().getParams() as Record<string, number>)['sliderBarHeight'];
   productDetail: ProductModel =
@@ -190,9 +192,11 @@ struct OrderConfirmPage {
             .fontSize($r('app.float.font_size_llg'))
             .fontWeight(FontWeight.Medium)
         }
+        .layoutWeight(1)
 
         Button($r('app.string.confirm_order'))
-          .width(CommonConstants.PERCENT_50)
+          .width(this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? '40%' : CommonConstants.PERCENT_50)
+          .height(this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? 52 : undefined)
           .linearGradient({
             angle: 90,
             colors: [[$r('app.color.button_start'), 0.11], [$r('app.color.button_end'), 0.89]]
@@ -219,8 +223,8 @@ struct OrderConfirmPage {
     .backgroundColor($r('app.color.common_bg'))
     .padding({
       top: this.statusBarHeight,
-      left: $r('app.float.md_padding_margin'),
-      right: $r('app.float.md_padding_margin'),
+      left: this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? $r('app.float.lg_padding_margin') : $r('app.float.md_padding_margin'),
+      right: this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? $r('app.float.lg_padding_margin') : $r('app.float.md_padding_margin'),
       bottom: this.sliderBarHeight
     })
   }

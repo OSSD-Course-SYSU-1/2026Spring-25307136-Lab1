@@ -19,12 +19,14 @@ import { window } from '@kit.ArkUI';
 import Logger from '../common/utils/Logger';
 import { CommonConstants } from '../common/constants/CommonConstants';
 import { ArkTSFunModel } from '../model/ProductModel';
+import { BreakpointConstants, BreakpointSystem } from '../common/utils/BreakpointSystem';
 
 const TAG: string = '[IndexPage]';
 
 @Entry
 @Component
 struct IndexPage {
+  @StorageProp('currentBreakpoint') currentBreakpoint: string = BreakpointConstants.BREAKPOINT_SM;
   @State @Watch('updateStatus') webCanBack: boolean = false;
   @State webCanForward: boolean = false;
   @State controller: webview.WebviewController = new webview.WebviewController();
@@ -33,12 +35,14 @@ struct IndexPage {
   @State showCompareBtn: boolean = true;
   @State compareMode: boolean = false;
   lastUrl: string = '';
+  private breakpointSystem: BreakpointSystem = new BreakpointSystem();
   arkTSObj: ArkTSFunModel = {
     jumpOrderConfirm: (detailStr: string) => this.jumpOrderConfirm(detailStr),
     showToast: (msg: string) => this.showArkToast(msg)
   };
 
   aboutToAppear() {
+    this.breakpointSystem.register();
     webview.WebviewController.setWebDebuggingAccess(true);
     window.getLastWindow(this.getUIContext().getHostContext(), (err: BusinessError, windowClass: window.Window) => {
       if (err && err.code) {
@@ -73,6 +77,7 @@ struct IndexPage {
 
   onPageHide() {
     this.updateStatusBar(false);
+    this.breakpointSystem.unregister();
   }
 
   updateStatus() {
@@ -258,11 +263,16 @@ struct IndexPage {
         // 比货模式下显示确认按钮
         if (this.compareMode) {
           Button('确认')
-            .constraintSize({ minWidth: 72, maxWidth: 72, minHeight: 72, maxHeight: 72 })
-            .borderRadius(36)
+            .constraintSize({
+              minWidth: this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? 88 : 72,
+              maxWidth: this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? 88 : 72,
+              minHeight: this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? 88 : 72,
+              maxHeight: this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? 88 : 72
+            })
+            .borderRadius(this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? 44 : 36)
             .backgroundColor($r('app.color.compare_btn_bg'))
             .fontColor(Color.White)
-            .fontSize(18)
+            .fontSize(this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? 22 : 18)
             .fontWeight(FontWeight.Medium)
             .shadow({
               radius: 8,
@@ -273,15 +283,23 @@ struct IndexPage {
             .onClick(() => {
               this.controller.runJavaScript('confirmCompare()');
             })
-            .position({ right: 16, bottom: this.sliderBarHeight + 148 })
+            .position({
+              right: this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? 24 : 16,
+              bottom: this.sliderBarHeight + 148
+            })
         }
 
         Button(this.compareMode ? '取消' : '比货')
-          .constraintSize({ minWidth: 72, maxWidth: 72, minHeight: 72, maxHeight: 72 })
-          .borderRadius(36)
+          .constraintSize({
+            minWidth: this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? 88 : 72,
+            maxWidth: this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? 88 : 72,
+            minHeight: this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? 88 : 72,
+            maxHeight: this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? 88 : 72
+          })
+          .borderRadius(this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? 44 : 36)
           .backgroundColor(this.compareMode ? '#E92F4F' : $r('app.color.compare_btn_bg'))
           .fontColor(Color.White)
-          .fontSize(18)
+          .fontSize(this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? 22 : 18)
           .fontWeight(FontWeight.Medium)
           .shadow({
             radius: 8,
@@ -290,7 +308,10 @@ struct IndexPage {
             offsetY: 2
           })
           .onClick(() => this.toggleCompare())
-          .position({ right: 16, bottom: this.sliderBarHeight + 64 })
+          .position({
+            right: this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? 24 : 16,
+            bottom: this.sliderBarHeight + 64
+          })
       }
     }
   }

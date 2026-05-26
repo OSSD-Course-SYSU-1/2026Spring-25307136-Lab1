@@ -2,6 +2,7 @@ if (!("finalizeConstruction" in ViewPU.prototype)) {
     Reflect.set(ViewPU.prototype, "finalizeConstruction", () => { });
 }
 interface IndexPage_Params {
+    currentBreakpoint?: string;
     webCanBack?: boolean;
     webCanForward?: boolean;
     controller?: webview.WebviewController;
@@ -10,6 +11,7 @@ interface IndexPage_Params {
     showCompareBtn?: boolean;
     compareMode?: boolean;
     lastUrl?: string;
+    breakpointSystem?: BreakpointSystem;
     arkTSObj?: ArkTSFunModel;
 }
 import type { BusinessError } from "@ohos:base";
@@ -18,6 +20,7 @@ import window from "@ohos:window";
 import Logger from "@bundle:com.example.pageredirection/entry/ets/common/utils/Logger";
 import { CommonConstants } from "@bundle:com.example.pageredirection/entry/ets/common/constants/CommonConstants";
 import type { ArkTSFunModel } from '../model/ProductModel';
+import { BreakpointConstants, BreakpointSystem } from "@bundle:com.example.pageredirection/entry/ets/common/utils/BreakpointSystem";
 const TAG: string = '[IndexPage]';
 class IndexPage extends ViewPU {
     constructor(parent, params, __localStorage, elmtId = -1, paramsLambda = undefined, extraInfo) {
@@ -25,6 +28,7 @@ class IndexPage extends ViewPU {
         if (typeof paramsLambda === "function") {
             this.paramsGenerator_ = paramsLambda;
         }
+        this.__currentBreakpoint = this.createStorageProp('currentBreakpoint', BreakpointConstants.BREAKPOINT_SM, "currentBreakpoint");
         this.__webCanBack = new ObservedPropertySimplePU(false, this, "webCanBack");
         this.__webCanForward = new ObservedPropertySimplePU(false, this, "webCanForward");
         this.__controller = new ObservedPropertyObjectPU(new webview.WebviewController(), this, "controller");
@@ -33,6 +37,7 @@ class IndexPage extends ViewPU {
         this.__showCompareBtn = new ObservedPropertySimplePU(true, this, "showCompareBtn");
         this.__compareMode = new ObservedPropertySimplePU(false, this, "compareMode");
         this.lastUrl = '';
+        this.breakpointSystem = new BreakpointSystem();
         this.arkTSObj = {
             jumpOrderConfirm: (detailStr: string) => this.jumpOrderConfirm(detailStr),
             showToast: (msg: string) => this.showArkToast(msg)
@@ -66,6 +71,9 @@ class IndexPage extends ViewPU {
         if (params.lastUrl !== undefined) {
             this.lastUrl = params.lastUrl;
         }
+        if (params.breakpointSystem !== undefined) {
+            this.breakpointSystem = params.breakpointSystem;
+        }
         if (params.arkTSObj !== undefined) {
             this.arkTSObj = params.arkTSObj;
         }
@@ -73,6 +81,7 @@ class IndexPage extends ViewPU {
     updateStateVars(params: IndexPage_Params) {
     }
     purgeVariableDependenciesOnElmtId(rmElmtId) {
+        this.__currentBreakpoint.purgeDependencyOnElmtId(rmElmtId);
         this.__webCanBack.purgeDependencyOnElmtId(rmElmtId);
         this.__webCanForward.purgeDependencyOnElmtId(rmElmtId);
         this.__controller.purgeDependencyOnElmtId(rmElmtId);
@@ -82,6 +91,7 @@ class IndexPage extends ViewPU {
         this.__compareMode.purgeDependencyOnElmtId(rmElmtId);
     }
     aboutToBeDeleted() {
+        this.__currentBreakpoint.aboutToBeDeleted();
         this.__webCanBack.aboutToBeDeleted();
         this.__webCanForward.aboutToBeDeleted();
         this.__controller.aboutToBeDeleted();
@@ -91,6 +101,13 @@ class IndexPage extends ViewPU {
         this.__compareMode.aboutToBeDeleted();
         SubscriberManager.Get().delete(this.id__());
         this.aboutToBeDeletedInternal();
+    }
+    private __currentBreakpoint: ObservedPropertyAbstractPU<string>;
+    get currentBreakpoint() {
+        return this.__currentBreakpoint.get();
+    }
+    set currentBreakpoint(newValue: string) {
+        this.__currentBreakpoint.set(newValue);
     }
     private __webCanBack: ObservedPropertySimplePU<boolean>;
     get webCanBack() {
@@ -142,8 +159,10 @@ class IndexPage extends ViewPU {
         this.__compareMode.set(newValue);
     }
     private lastUrl: string;
+    private breakpointSystem: BreakpointSystem;
     private arkTSObj: ArkTSFunModel;
     aboutToAppear() {
+        this.breakpointSystem.register();
         webview.WebviewController.setWebDebuggingAccess(true);
         window.getLastWindow(this.getUIContext().getHostContext(), (err: BusinessError, windowClass: window.Window) => {
             if (err && err.code) {
@@ -175,6 +194,7 @@ class IndexPage extends ViewPU {
     }
     onPageHide() {
         this.updateStatusBar(false);
+        this.breakpointSystem.unregister();
     }
     updateStatus() {
         this.updateStatusBar(this.webCanBack);
@@ -384,11 +404,16 @@ class IndexPage extends ViewPU {
                             this.ifElseBranchUpdateFunction(0, () => {
                                 this.observeComponentCreation2((elmtId, isInitialRender) => {
                                     Button.createWithLabel('确认');
-                                    Button.constraintSize({ minWidth: 72, maxWidth: 72, minHeight: 72, maxHeight: 72 });
-                                    Button.borderRadius(36);
+                                    Button.constraintSize({
+                                        minWidth: this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? 88 : 72,
+                                        maxWidth: this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? 88 : 72,
+                                        minHeight: this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? 88 : 72,
+                                        maxHeight: this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? 88 : 72
+                                    });
+                                    Button.borderRadius(this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? 44 : 36);
                                     Button.backgroundColor({ "id": 16777274, "type": 10001, params: [], "bundleName": "com.example.pageredirection", "moduleName": "entry" });
                                     Button.fontColor(Color.White);
-                                    Button.fontSize(18);
+                                    Button.fontSize(this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? 22 : 18);
                                     Button.fontWeight(FontWeight.Medium);
                                     Button.shadow({
                                         radius: 8,
@@ -399,7 +424,10 @@ class IndexPage extends ViewPU {
                                     Button.onClick(() => {
                                         this.controller.runJavaScript('confirmCompare()');
                                     });
-                                    Button.position({ right: 16, bottom: this.sliderBarHeight + 148 });
+                                    Button.position({
+                                        right: this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? 24 : 16,
+                                        bottom: this.sliderBarHeight + 148
+                                    });
                                 }, Button);
                                 Button.pop();
                             });
@@ -412,11 +440,16 @@ class IndexPage extends ViewPU {
                     If.pop();
                     this.observeComponentCreation2((elmtId, isInitialRender) => {
                         Button.createWithLabel(this.compareMode ? '取消' : '比货');
-                        Button.constraintSize({ minWidth: 72, maxWidth: 72, minHeight: 72, maxHeight: 72 });
-                        Button.borderRadius(36);
+                        Button.constraintSize({
+                            minWidth: this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? 88 : 72,
+                            maxWidth: this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? 88 : 72,
+                            minHeight: this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? 88 : 72,
+                            maxHeight: this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? 88 : 72
+                        });
+                        Button.borderRadius(this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? 44 : 36);
                         Button.backgroundColor(this.compareMode ? '#E92F4F' : { "id": 16777274, "type": 10001, params: [], "bundleName": "com.example.pageredirection", "moduleName": "entry" });
                         Button.fontColor(Color.White);
-                        Button.fontSize(18);
+                        Button.fontSize(this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? 22 : 18);
                         Button.fontWeight(FontWeight.Medium);
                         Button.shadow({
                             radius: 8,
@@ -425,7 +458,10 @@ class IndexPage extends ViewPU {
                             offsetY: 2
                         });
                         Button.onClick(() => this.toggleCompare());
-                        Button.position({ right: 16, bottom: this.sliderBarHeight + 64 });
+                        Button.position({
+                            right: this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? 24 : 16,
+                            bottom: this.sliderBarHeight + 64
+                        });
                     }, Button);
                     Button.pop();
                 });
