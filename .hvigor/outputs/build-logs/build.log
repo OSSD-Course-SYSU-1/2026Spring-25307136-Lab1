@@ -14177,3 +14177,14 @@ Warning: F:\Study\kaiyuan\clone\page-redirection-master\entry\src\main\resources
 [2026-05-26T17:42:43.236] [DEBUG] debug-file - Update task entry:default@CollectDebugSymbol input file:F:\Study\kaiyuan\clone\page-redirection-master\entry\build\default\intermediates\libs\default cache by regenerate.
 [2026-05-26T17:42:43.237] [DEBUG] debug-file - Update task entry:default@CollectDebugSymbol output file:F:\Study\kaiyuan\clone\page-redirection-master\entry\build\default\outputs\default\symbol cache.
 [2026-05-26T17:42:43.237] [DEBUG] debug-file - Incremental task entry:default@CollectDebugSymbol post-execution cost:2 ms .
+[2026-05-26T17:42:43.253] [DEBUG] debug-file - Cleanup worker 30.
+[2026-05-26T17:42:43.253] [DEBUG] debug-file - Worker 30 has been cleaned up.
+[2026-05-26T17:42:43.253] [DEBUG] debug-file - Current idle worker size: 1.
+[2026-05-26T17:42:43.253] [DEBUG] debug-file - Current resident worker size: 2.
+[2026-05-26T17:42:43.253] [DEBUG] debug-file - hvigor build process will be closed.
+[2026-05-26T17:42:43.253] [DEBUG] debug-file - java daemon socket close code:1000 reason:close by user
+[2026-05-26T17:42:43.258] [DEBUG] debug-file - session manager: send message to worker process.
+[2026-05-26T17:42:43.258] [DEBUG] debug-file - session manager: send message to worker process.
+[2026-05-26T17:42:43.261] [DEBUG] debug-file - worker[30] exits with exit code 1.
+[2026-05-26T17:42:43.262] [DEBUG] debug-file - watch worker: worker id should be larger than 0. Nothing will be sent to any worker thread.
+[2026-05-26T17:42:43.262] [DEBUG] debug-file - watch worker: worker id should be larger than 0. Nothing will be sent to any worker thread.
