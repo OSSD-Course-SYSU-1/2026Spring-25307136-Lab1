@@ -83,12 +83,6 @@ let urlSearchParams = new URLSearchParams(window.location.search);
 let productIndex = urlSearchParams.get('index');
 let productDetail = productList[productIndex];
 productDetail.sku = '冰晶蓝，8GB+128GB，4G网网通，官电视剧还是快点好4G网网通';
-let swiperStr = '<img alt="" class="showing" src="' + productDetail.img + '" />';
-for (let i = 0; i < 3; i++) {
-  swiperStr += '<img alt="" src="imgs/ic_' + ((productDetail.id + i) % 6 + 1) + '.png" />'
-}
-swiperStr += '<div id="dot" >1/4</div>';
-document.getElementById('swiper').innerHTML = swiperStr;
 document.getElementById('price').innerHTML = '<span>¥ </span>' + productDetail.price;
 document.getElementById('product-name').innerHTML = productDetail.name;
 
@@ -96,6 +90,9 @@ document.getElementById('product-name').innerHTML = productDetail.name;
 let compareIdx = parseInt(urlSearchParams.get('compareIdx'));
 let compareProduct = null;
 let isCompareMode = !isNaN(compareIdx) && compareIdx >= 0 && compareIdx < productList.length && compareIdx != productIndex;
+
+// 构建轮播 slides
+let swiperStr = '';
 if (isCompareMode) {
   compareProduct = productList[compareIdx];
   document.getElementById('compare-price').innerHTML = '¥' + compareProduct.price;
@@ -107,7 +104,25 @@ if (isCompareMode) {
   document.getElementById('menu').innerHTML =
     '<div style="flex:1"><button class="btn-compare btn-choose-one" onclick="chooseOne()">选一</button></div>' +
     '<div style="flex:1"><button class="btn-compare btn-choose-two" onclick="chooseTwo()">选二</button></div>';
+
+  // 先放商品一的图片，再放商品二的图片
+  swiperStr += '<div class="slide showing" data-label="一"><img src="' + productDetail.img + '" /></div>';
+  for (let i = 0; i < 3; i++) {
+    swiperStr += '<div class="slide" data-label="一"><img src="imgs/ic_' + ((productDetail.id + i) % 6 + 1) + '.png" /></div>';
+  }
+  swiperStr += '<div class="slide" data-label="二"><img src="' + compareProduct.img + '" /></div>';
+  for (let i = 0; i < 3; i++) {
+    swiperStr += '<div class="slide" data-label="二"><img src="imgs/ic_' + ((compareProduct.id + i) % 6 + 1) + '.png" /></div>';
+  }
+} else {
+  swiperStr += '<div class="slide showing"><img src="' + productDetail.img + '" /></div>';
+  for (let i = 0; i < 3; i++) {
+    swiperStr += '<div class="slide"><img src="imgs/ic_' + ((productDetail.id + i) % 6 + 1) + '.png" /></div>';
+  }
 }
+let totalSlides = isCompareMode ? 8 : 4;
+swiperStr += '<div id="dot">1/' + totalSlides + '</div>';
+document.getElementById('swiper').innerHTML = swiperStr;
 
 // 构建商品详情（比货模式下交替插入第二件商品对应段落）
 let detailHtml = '';
@@ -125,22 +140,21 @@ for (let i = 0; i < maxLen; i++) {
 document.getElementById('product-info').innerHTML = detailHtml;
 
 let currentIndex = 0;
-let images = document.querySelectorAll('#swiper img');
+let slides = document.querySelectorAll('#swiper .slide');
 
 function showNext() {
-  var currentImg = document.querySelector('.showing');
-  if (currentImg) {
-    currentImg.classList.remove('showing');
-
+  var currentSlide = document.querySelector('#swiper .slide.showing');
+  if (currentSlide) {
+    currentSlide.classList.remove('showing');
     currentIndex += 1;
-    if (currentIndex >= images.length) {
+    if (currentIndex >= slides.length) {
       currentIndex = 0;
     }
     var dot = document.querySelector('#dot');
-    dot.innerHTML = (currentIndex + 1) + '/4';
-    images[currentIndex].classList.add('showing');
+    dot.innerHTML = (currentIndex + 1) + '/' + slides.length;
+    slides[currentIndex].classList.add('showing');
   } else {
-    images[0].classList.add('showing');
+    slides[0].classList.add('showing');
   }
 }
 

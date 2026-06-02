@@ -85,3 +85,65 @@ li > div > span > span {
     transform: rotate(45deg);
     margin: 1px auto 0;
 }
+
+/* 平板设备适配：中等屏幕 (600vp~840vp) */
+@media screen and (min-width: 600px) {
+    #nav {
+        height: 64px;
+        font-size: 28px;
+        line-height: 64px;
+        padding: 0 32px;
+    }
+    li {
+        padding: 12px 32px;
+    }
+    li > img {
+        width: 150px;
+        border-radius: 22px;
+    }
+    li > div {
+        margin-left: 16px;
+    }
+    li > div > p {
+        font-size: 18px;
+        line-height: 26px;
+    }
+    li > div > span {
+        font-size: 28px;
+        line-height: 38px;
+    }
+    li > div > span > span {
+        font-size: 18px;
+    }
+}
+
+/* 平板设备适配：大屏幕 (>=840vp) */
+@media screen and (min-width: 840px) {
+    #nav {
+        height: 72px;
+        font-size: 32px;
+        line-height: 72px;
+        padding: 0 40px;
+    }
+    li {
+        padding: 16px 40px;
+    }
+    li > img {
+        width: 190px;
+        border-radius: 26px;
+    }
+    li > div {
+        margin-left: 20px;
+    }
+    li > div > p {
+        font-size: 22px;
+        line-height: 32px;
+    }
+    li > div > span {
+        font-size: 34px;
+        line-height: 46px;
+    }
+    li > div > span > span {
+        font-size: 22px;
+    }
+}

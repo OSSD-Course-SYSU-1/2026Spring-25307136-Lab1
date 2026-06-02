@@ -71,12 +71,16 @@ function enableCompareMode() {
     let checkbox = document.createElement('div');
     checkbox.className = 'compare-checkbox';
     checkbox.setAttribute('data-index', i);
-    checkbox.onclick = function(e) {
-      e.stopPropagation();
-      let idx = parseInt(this.getAttribute('data-index'));
+    lis[i].insertBefore(checkbox, lis[i].firstChild);
+    // 比货模式下禁用跳转详情
+    lis[i].removeAttribute('onclick');
+    // 点击整个商品区域来勾选/取消
+    lis[i].onclick = function() {
+      let cb = this.querySelector('.compare-checkbox');
+      let idx = parseInt(cb.getAttribute('data-index'));
       // 反选：直接取消勾选
-      if (this.classList.contains('checked')) {
-        this.classList.remove('checked');
+      if (cb.classList.contains('checked')) {
+        cb.classList.remove('checked');
         let pos = selectedCompareItems.indexOf(idx);
         if (pos !== -1) {
           selectedCompareItems.splice(pos, 1);
@@ -91,14 +95,11 @@ function enableCompareMode() {
         return;
       }
       // 勾选
-      this.classList.add('checked');
+      cb.classList.add('checked');
       if (selectedCompareItems.indexOf(idx) === -1) {
         selectedCompareItems.push(idx);
       }
     };
-    lis[i].insertBefore(checkbox, lis[i].firstChild);
-    // 比货模式下禁用跳转详情
-    lis[i].removeAttribute('onclick');
   }
 }
 

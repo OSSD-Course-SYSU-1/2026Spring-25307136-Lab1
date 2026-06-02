@@ -285,7 +285,8 @@ struct IndexPage {
             })
             .position({
               right: this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? 24 : 16,
-              bottom: this.sliderBarHeight + 148
+              bottom: this.sliderBarHeight +
+                (this.currentBreakpoint === BreakpointConstants.BREAKPOINT_LG ? 188 : 148)
             })
         }
 

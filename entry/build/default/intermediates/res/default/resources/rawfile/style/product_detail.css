@@ -26,17 +26,37 @@ body {
     background-color: #000000;
 }
 
-#swiper > img {
+.slide {
+    display: none;
+    position: relative;
+}
+
+.slide.showing {
+    display: block;
+}
+
+.slide > img {
     width: 100%;
     aspect-ratio: 1.42;
     margin: 16px 0 24px 0;
     object-fit: cover;
-    display: none;
 }
 
-.showing {
-    display: block !important;
+/* 轮播图左上角商品标签 */
+.slide[data-label]::before {
+    content: attr(data-label);
+    position: absolute;
+    top: 24px;
+    left: 16px;
+    z-index: 2;
+    font-size: 12px;
+    color: #999999;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 2px 8px;
+    border-radius: 4px;
+    line-height: 18px;
 }
+
 #dot {
     position: absolute;
     right: 18px;
@@ -210,4 +230,164 @@ button:last-of-type {
 
 .btn-choose-two {
     background: linear-gradient(90deg, #F64D43 11%, #EB344D 89%);
+}
+
+/* 平板设备适配：中等屏幕 (600vp~840vp) */
+@media screen and (min-width: 600px) {
+    .slide > img {
+        margin: 20px 0 28px 0;
+    }
+    .slide[data-label]::before {
+        top: 28px;
+        left: 24px;
+        font-size: 14px;
+        padding: 3px 10px;
+        border-radius: 5px;
+        line-height: 22px;
+    }
+    #dot {
+        right: 24px;
+        top: 68vw;
+        width: 48px;
+        height: 24px;
+        border-radius: 12px;
+        font-size: 14px;
+        line-height: 24px;
+    }
+    #info {
+        margin: 16px;
+        border-radius: 20px;
+        padding: 16px;
+    }
+    #price {
+        font-size: 26px;
+        line-height: 36px;
+    }
+    #price > span {
+        font-size: 18px;
+    }
+    #compare-price {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    #product-name {
+        font-size: 20px;
+        line-height: 28px;
+        margin-top: 16px;
+    }
+    #compare-name {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    #guide {
+        font-size: 18px;
+        line-height: 26px;
+        margin-top: 32px;
+    }
+    #product-info {
+        font-size: 18px;
+        line-height: 26px;
+        margin-top: 12px;
+    }
+    #menu {
+        height: 64px;
+        padding: 0 16px;
+    }
+    .btn > img {
+        width: 28px;
+        height: 28px;
+    }
+    .btn > text {
+        font-size: 12px;
+        margin-top: 6px;
+    }
+    button {
+        height: 48px;
+        width: 108px;
+        font-size: 15px;
+    }
+    .btn-compare {
+        height: 48px;
+        font-size: 16px;
+    }
+}
+
+/* 平板设备适配：大屏幕 (>=840vp) */
+@media screen and (min-width: 840px) {
+    .slide > img {
+        margin: 24px 0 32px 0;
+    }
+    .slide[data-label]::before {
+        top: 32px;
+        left: 32px;
+        font-size: 16px;
+        padding: 4px 12px;
+        border-radius: 6px;
+        line-height: 24px;
+    }
+    #dot {
+        right: 28px;
+        top: 68vw;
+        width: 56px;
+        height: 28px;
+        border-radius: 14px;
+        font-size: 16px;
+        line-height: 28px;
+    }
+    #info {
+        margin: 24px;
+        border-radius: 24px;
+        padding: 24px;
+    }
+    #price {
+        font-size: 32px;
+        line-height: 44px;
+    }
+    #price > span {
+        font-size: 22px;
+    }
+    #compare-price {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    #product-name {
+        font-size: 24px;
+        line-height: 34px;
+        margin-top: 20px;
+    }
+    #compare-name {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    #guide {
+        font-size: 22px;
+        line-height: 32px;
+        margin-top: 40px;
+    }
+    #product-info {
+        font-size: 22px;
+        line-height: 32px;
+        margin-top: 16px;
+    }
+    #menu {
+        height: 72px;
+        padding: 0 24px;
+    }
+    .btn > img {
+        width: 32px;
+        height: 32px;
+    }
+    .btn > text {
+        font-size: 14px;
+        margin-top: 8px;
+    }
+    button {
+        height: 56px;
+        width: 128px;
+        font-size: 18px;
+    }
+    .btn-compare {
+        height: 56px;
+        font-size: 18px;
+    }
 }
