@@ -38,6 +38,22 @@ struct OrderConfirmPage {
   productDetail: ProductModel =
     JSON.parse((this.getUIContext().getRouter().getParams() as Record<string, string>)['detailStr']) as ProductModel;
 
+  // 保存当前订单数据到AppStorage，供迁移时使用
+  aboutToAppear(): void {
+    const params = this.getUIContext().getRouter().getParams() as Record<string, Object>;
+    if (params && params['detailStr']) {
+      AppStorage.setOrCreate<string>('currentOrderDetail', params['detailStr'] as string);
+    }
+    if (params && params['statusBarHeight'] !== undefined) {
+      AppStorage.setOrCreate<number>('statusBarHeight', params['statusBarHeight'] as number);
+    }
+    if (params && params['sliderBarHeight'] !== undefined) {
+      AppStorage.setOrCreate<number>('sliderBarHeight', params['sliderBarHeight'] as number);
+    }
+    // 标记当前页面为订单确认页，迁移后对端可以恢复此页面
+    AppStorage.setOrCreate<string>('currentPageUrl', 'order_confirm');
+  }
+
   build() {
     Column() {
       Row() {

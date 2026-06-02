@@ -35,6 +35,8 @@ struct IndexPage {
   @State showCompareBtn: boolean = true;
   @State compareMode: boolean = false;
   lastUrl: string = '';
+  // 接续恢复时使用保存的URL，否则加载默认页面
+  @State webSrc: Resource | string = $rawfile('product_list.html');
   private breakpointSystem: BreakpointSystem = new BreakpointSystem();
   arkTSObj: ArkTSFunModel = {
     jumpOrderConfirm: (detailStr: string) => this.jumpOrderConfirm(detailStr),
@@ -44,6 +46,13 @@ struct IndexPage {
   aboutToAppear() {
     this.breakpointSystem.register();
     webview.WebviewController.setWebDebuggingAccess(true);
+    // 从接续数据中恢复上次浏览的Web页面URL（通过AppStorage跨页面传递，不干预系统自动页面栈恢复）
+    const continueUrl = AppStorage.get<string>('continuePageUrl');
+    if (continueUrl && continueUrl.length > 0 && continueUrl !== 'order_confirm') {
+      this.lastUrl = continueUrl;
+      this.webSrc = continueUrl;
+      AppStorage.setOrCreate<boolean>('isContinueRestore', true);
+    }
     window.getLastWindow(this.getUIContext().getHostContext(), (err: BusinessError, windowClass: window.Window) => {
       if (err && err.code) {
         Logger.error(TAG, `Failed to obtain the main window. Cause: code=${err.code}, message=${err.message}`);
@@ -58,6 +67,8 @@ struct IndexPage {
         let sliderBarHeight = this.getUIContext().px2vp(area.bottomRect.height);
         this.statusBarHeight = statusBarHeight;
         this.sliderBarHeight = sliderBarHeight;
+        AppStorage.setOrCreate<number>('statusBarHeight', statusBarHeight);
+        AppStorage.setOrCreate<number>('sliderBarHeight', sliderBarHeight);
         if (statusBarHeight > 0) {
           windowClass.setWindowLayoutFullScreen(true);
         }
@@ -154,7 +165,7 @@ struct IndexPage {
   build() {
     Stack() {
       Column() {
-        Web({ src: $rawfile('product_list.html'), controller: this.controller })
+        Web({ src: this.webSrc, controller: this.controller })
           .layoutWeight(1)
           .javaScriptProxy({
             object: this.arkTSObj,
@@ -177,6 +188,7 @@ struct IndexPage {
           .onPageBegin((event) => {
             if (event && event.url) {
               this.lastUrl = event.url;
+              AppStorage.setOrCreate<string>('currentPageUrl', event.url);
               let isDetail = event.url.includes('product_detail');
               this.showCompareBtn = !isDetail;
               if (isDetail && this.compareMode) {

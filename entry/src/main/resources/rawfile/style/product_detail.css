@@ -293,6 +293,15 @@ button:last-of-type {
         height: 64px;
         padding: 0 16px;
     }
+    #menu > div:first-of-type {
+        flex: 0 0 auto;
+        gap: 64px;
+        margin-left: 48px;
+    }
+    #menu > div:last-of-type {
+        flex: 1;
+        justify-content: flex-end;
+    }
     .btn > img {
         width: 28px;
         height: 28px;
@@ -303,8 +312,8 @@ button:last-of-type {
     }
     button {
         height: 48px;
-        width: 108px;
-        font-size: 15px;
+        width: 240px;
+        font-size: 16px;
     }
     .btn-compare {
         height: 48px;
@@ -373,6 +382,15 @@ button:last-of-type {
         height: 72px;
         padding: 0 24px;
     }
+    #menu > div:first-of-type {
+        flex: 0 0 auto;
+        gap: 96px;
+        margin-left: 72px;
+    }
+    #menu > div:last-of-type {
+        flex: 1;
+        justify-content: flex-end;
+    }
     .btn > img {
         width: 32px;
         height: 32px;
@@ -383,7 +401,7 @@ button:last-of-type {
     }
     button {
         height: 56px;
-        width: 128px;
+        width: 360px;
         font-size: 18px;
     }
     .btn-compare {

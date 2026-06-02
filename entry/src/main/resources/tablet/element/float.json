@@ -2,31 +2,31 @@
   "float": [
     {
       "name": "font_size_sm",
-      "value": "16fp"
+      "value": "18fp"
     },
     {
       "name": "line_height_sm",
-      "value": "22vp"
+      "value": "24vp"
     },
     {
       "name": "font_size_mm",
-      "value": "20fp"
+      "value": "24fp"
     },
     {
       "name": "line_height_mm",
-      "value": "28vp"
+      "value": "32vp"
     },
     {
       "name": "font_size_md",
-      "value": "26fp"
-    },
-    {
-      "name": "font_size_lg",
       "value": "30fp"
     },
     {
-      "name": "font_size_llg",
+      "name": "font_size_lg",
       "value": "36fp"
+    },
+    {
+      "name": "font_size_llg",
+      "value": "42fp"
     },
     {
       "name": "more_img_width",
