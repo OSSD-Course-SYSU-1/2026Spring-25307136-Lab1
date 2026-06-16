@@ -158,7 +158,44 @@ function showNext() {
   }
 }
 
-setInterval(showNext, 2000);
+var slideInterval = setInterval(showNext, 2000);
+
+// 触摸滑动切换
+var touchStartX = 0;
+var touchStartY = 0;
+
+document.getElementById('slider').addEventListener('touchstart', function (e) {
+  touchStartX = e.touches[0].clientX;
+  touchStartY = e.touches[0].clientY;
+  clearInterval(slideInterval);
+}, { passive: true });
+
+document.getElementById('slider').addEventListener('touchend', function (e) {
+  var deltaX = e.changedTouches[0].clientX - touchStartX;
+  var deltaY = e.changedTouches[0].clientY - touchStartY;
+  if (Math.abs(deltaX) > 30 && Math.abs(deltaX) > Math.abs(deltaY)) {
+    if (deltaX < 0) {
+      showNext();
+    } else {
+      showPrev();
+    }
+  }
+  slideInterval = setInterval(showNext, 2000);
+});
+
+function showPrev() {
+  var currentSlide = document.querySelector('#swiper .slide.showing');
+  if (currentSlide) {
+    currentSlide.classList.remove('showing');
+    currentIndex -= 1;
+    if (currentIndex < 0) {
+      currentIndex = slides.length - 1;
+    }
+    var dot = document.querySelector('#dot');
+    dot.innerHTML = (currentIndex + 1) + '/' + slides.length;
+    slides[currentIndex].classList.add('showing');
+  }
+}
 
 function orderConfirm() {
   arkTSFunObj.jumpOrderConfirm(JSON.stringify(productDetail));

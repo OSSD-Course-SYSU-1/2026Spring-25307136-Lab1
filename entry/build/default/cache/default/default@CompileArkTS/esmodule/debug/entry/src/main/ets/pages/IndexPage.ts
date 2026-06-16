@@ -11,6 +11,7 @@ interface IndexPage_Params {
     showCompareBtn?: boolean;
     compareMode?: boolean;
     lastUrl?: string;
+    webSrc?: Resource | string;
     breakpointSystem?: BreakpointSystem;
     arkTSObj?: ArkTSFunModel;
 }
@@ -37,6 +38,7 @@ class IndexPage extends ViewPU {
         this.__showCompareBtn = new ObservedPropertySimplePU(true, this, "showCompareBtn");
         this.__compareMode = new ObservedPropertySimplePU(false, this, "compareMode");
         this.lastUrl = '';
+        this.__webSrc = new ObservedPropertyObjectPU({ "id": 0, "type": 30000, params: ['product_list.html'], "bundleName": "com.example.pageredirection", "moduleName": "entry" }, this, "webSrc");
         this.breakpointSystem = new BreakpointSystem();
         this.arkTSObj = {
             jumpOrderConfirm: (detailStr: string) => this.jumpOrderConfirm(detailStr),
@@ -71,6 +73,9 @@ class IndexPage extends ViewPU {
         if (params.lastUrl !== undefined) {
             this.lastUrl = params.lastUrl;
         }
+        if (params.webSrc !== undefined) {
+            this.webSrc = params.webSrc;
+        }
         if (params.breakpointSystem !== undefined) {
             this.breakpointSystem = params.breakpointSystem;
         }
@@ -89,6 +94,7 @@ class IndexPage extends ViewPU {
         this.__sliderBarHeight.purgeDependencyOnElmtId(rmElmtId);
         this.__showCompareBtn.purgeDependencyOnElmtId(rmElmtId);
         this.__compareMode.purgeDependencyOnElmtId(rmElmtId);
+        this.__webSrc.purgeDependencyOnElmtId(rmElmtId);
     }
     aboutToBeDeleted() {
         this.__currentBreakpoint.aboutToBeDeleted();
@@ -99,6 +105,7 @@ class IndexPage extends ViewPU {
         this.__sliderBarHeight.aboutToBeDeleted();
         this.__showCompareBtn.aboutToBeDeleted();
         this.__compareMode.aboutToBeDeleted();
+        this.__webSrc.aboutToBeDeleted();
         SubscriberManager.Get().delete(this.id__());
         this.aboutToBeDeletedInternal();
     }
@@ -159,11 +166,26 @@ class IndexPage extends ViewPU {
         this.__compareMode.set(newValue);
     }
     private lastUrl: string;
+    // 接续恢复时使用保存的URL，否则加载默认页面
+    private __webSrc: ObservedPropertyObjectPU<Resource | string>;
+    get webSrc() {
+        return this.__webSrc.get();
+    }
+    set webSrc(newValue: Resource | string) {
+        this.__webSrc.set(newValue);
+    }
     private breakpointSystem: BreakpointSystem;
     private arkTSObj: ArkTSFunModel;
     aboutToAppear() {
         this.breakpointSystem.register();
         webview.WebviewController.setWebDebuggingAccess(true);
+        // 从接续数据中恢复上次浏览的Web页面URL（通过AppStorage跨页面传递，不干预系统自动页面栈恢复）
+        const continueUrl = AppStorage.get<string>('continuePageUrl');
+        if (continueUrl && continueUrl.length > 0 && continueUrl !== 'order_confirm') {
+            this.lastUrl = continueUrl;
+            this.webSrc = continueUrl;
+            AppStorage.setOrCreate<boolean>('isContinueRestore', true);
+        }
         window.getLastWindow(this.getUIContext().getHostContext(), (err: BusinessError, windowClass: window.Window) => {
             if (err && err.code) {
                 Logger.error(TAG, `Failed to obtain the main window. Cause: code=${err.code}, message=${err.message}`);
@@ -177,6 +199,8 @@ class IndexPage extends ViewPU {
                 let sliderBarHeight = this.getUIContext().px2vp(area.bottomRect.height);
                 this.statusBarHeight = statusBarHeight;
                 this.sliderBarHeight = sliderBarHeight;
+                AppStorage.setOrCreate<number>('statusBarHeight', statusBarHeight);
+                AppStorage.setOrCreate<number>('sliderBarHeight', sliderBarHeight);
                 if (statusBarHeight > 0) {
                     windowClass.setWindowLayoutFullScreen(true);
                 }
@@ -277,7 +301,7 @@ class IndexPage extends ViewPU {
             Column.padding({ top: this.statusBarHeight - 1, bottom: this.sliderBarHeight });
         }, Column);
         this.observeComponentCreation2((elmtId, isInitialRender) => {
-            Web.create({ src: { "id": 0, "type": 30000, params: ['product_list.html'], "bundleName": "com.example.pageredirection", "moduleName": "entry" }, controller: this.controller });
+            Web.create({ src: this.webSrc, controller: this.controller });
             Web.layoutWeight(1);
             Web.javaScriptProxy({
                 object: this.arkTSObj,
@@ -301,6 +325,7 @@ class IndexPage extends ViewPU {
             Web.onPageBegin((event) => {
                 if (event && event.url) {
                     this.lastUrl = event.url;
+                    AppStorage.setOrCreate<string>('currentPageUrl', event.url);
                     let isDetail = event.url.includes('product_detail');
                     this.showCompareBtn = !isDetail;
                     if (isDetail && this.compareMode) {

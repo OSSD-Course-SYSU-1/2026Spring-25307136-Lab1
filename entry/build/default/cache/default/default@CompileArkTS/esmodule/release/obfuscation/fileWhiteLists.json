@@ -1,0 +1,190 @@
+{
+  "F:/Study/kaiyuan/clone/page-redirection-master/entry/src/main/ets/pages/OrderConfirmPage.ets": {
+    "fileKeepInfo": {
+      "structProperties": [
+        "setInitiallyProvidedValue",
+        "updateStateVars",
+        "purgeVariableDependenciesOnElmtId",
+        "aboutToBeDeleted",
+        "__currentBreakpoint",
+        "currentBreakpoint",
+        "statusBarHeight",
+        "sliderBarHeight",
+        "productDetail",
+        "initialRender",
+        "rerender",
+        "getEntryName",
+        "build"
+      ],
+      "exported": {
+        "propertyNames": [],
+        "globalNames": []
+      },
+      "enumProperties": [],
+      "stringProperties": [
+        "statusBarHeight",
+        "sliderBarHeight",
+        "detailStr"
+      ],
+      "arkUIKeepInfo": {
+        "propertyNames": [],
+        "globalNames": []
+      }
+    },
+    "fileReservedInfo": {
+      "enumProperties": [],
+      "propertyParams": []
+    }
+  },
+  "F:/Study/kaiyuan/clone/page-redirection-master/entry/src/main/ets/entryability/EntryAbility.ets": {
+    "fileKeepInfo": {
+      "structProperties": [],
+      "exported": {
+        "propertyNames": [],
+        "globalNames": []
+      },
+      "enumProperties": [],
+      "stringProperties": [],
+      "arkUIKeepInfo": {
+        "propertyNames": [],
+        "globalNames": []
+      }
+    },
+    "fileReservedInfo": {
+      "enumProperties": [],
+      "propertyParams": []
+    }
+  },
+  "F:/Study/kaiyuan/clone/page-redirection-master/entry/src/main/ets/pages/IndexPage.ets": {
+    "fileKeepInfo": {
+      "structProperties": [
+        "setInitiallyProvidedValue",
+        "updateStateVars",
+        "purgeVariableDependenciesOnElmtId",
+        "aboutToBeDeleted",
+        "__currentBreakpoint",
+        "currentBreakpoint",
+        "__webCanBack",
+        "webCanBack",
+        "__webCanForward",
+        "webCanForward",
+        "__controller",
+        "controller",
+        "__statusBarHeight",
+        "statusBarHeight",
+        "__sliderBarHeight",
+        "sliderBarHeight",
+        "__showCompareBtn",
+        "showCompareBtn",
+        "__compareMode",
+        "compareMode",
+        "lastUrl",
+        "breakpointSystem",
+        "arkTSObj",
+        "aboutToAppear",
+        "onPageShow",
+        "onPageHide",
+        "updateStatus",
+        "onBackPress",
+        "updateStatusBar",
+        "toggleCompare",
+        "showArkToast",
+        "jumpOrderConfirm",
+        "initialRender",
+        "rerender",
+        "getEntryName",
+        "build"
+      ],
+      "exported": {
+        "propertyNames": [],
+        "globalNames": []
+      },
+      "enumProperties": [],
+      "stringProperties": [],
+      "arkUIKeepInfo": {
+        "propertyNames": [],
+        "globalNames": []
+      }
+    },
+    "fileReservedInfo": {
+      "enumProperties": [],
+      "propertyParams": []
+    }
+  },
+  "F:/Study/kaiyuan/clone/page-redirection-master/entry/src/main/ets/common/constants/CommonConstants.ets": {
+    "fileKeepInfo": {
+      "structProperties": [],
+      "exported": {
+        "propertyNames": [],
+        "globalNames": []
+      },
+      "enumProperties": [],
+      "stringProperties": [],
+      "arkUIKeepInfo": {
+        "propertyNames": [],
+        "globalNames": []
+      }
+    },
+    "fileReservedInfo": {
+      "enumProperties": [],
+      "propertyParams": []
+    }
+  },
+  "F:/Study/kaiyuan/clone/page-redirection-master/entry/src/main/ets/common/utils/Logger.ets": {
+    "fileKeepInfo": {
+      "structProperties": [],
+      "exported": {
+        "propertyNames": [],
+        "globalNames": []
+      },
+      "enumProperties": [],
+      "stringProperties": [],
+      "arkUIKeepInfo": {
+        "propertyNames": [],
+        "globalNames": []
+      }
+    },
+    "fileReservedInfo": {
+      "enumProperties": [],
+      "propertyParams": []
+    }
+  },
+  "F:/Study/kaiyuan/clone/page-redirection-master/entry/src/main/ets/common/utils/BreakpointSystem.ets": {
+    "fileKeepInfo": {
+      "structProperties": [],
+      "exported": {
+        "propertyNames": [],
+        "globalNames": []
+      },
+      "enumProperties": [],
+      "stringProperties": [],
+      "arkUIKeepInfo": {
+        "propertyNames": [],
+        "globalNames": []
+      }
+    },
+    "fileReservedInfo": {
+      "enumProperties": [],
+      "propertyParams": []
+    }
+  },
+  "F:/Study/kaiyuan/clone/page-redirection-master/entry/src/main/ets/model/ProductModel.ets": {
+    "fileKeepInfo": {
+      "structProperties": [],
+      "exported": {
+        "propertyNames": [],
+        "globalNames": []
+      },
+      "enumProperties": [],
+      "stringProperties": [],
+      "arkUIKeepInfo": {
+        "propertyNames": [],
+        "globalNames": []
+      }
+    },
+    "fileReservedInfo": {
+      "enumProperties": [],
+      "propertyParams": []
+    }
+  }
+}

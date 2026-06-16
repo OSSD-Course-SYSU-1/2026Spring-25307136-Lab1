@@ -1,0 +1,180 @@
+{
+  "entry/src/main/ets/common/constants/CommonConstants.ets": {
+    "IdentifierCache": {
+      "#CommonConstants": "i"
+    },
+    "MemberMethodCache": {},
+    "obfName": "entry/src/main/ets/a/b/c.ets"
+  },
+  "entry/src/main/ets/common/utils/BreakpointSystem.ets": {
+    "IdentifierCache": {
+      "#mediaquery": "mediaquery",
+      "#BreakpointConstants": "a1",
+      "#BreakPointTypeOption": "b1",
+      "#BreakPointType": "c1",
+      "#BreakpointSystem": "d1",
+      "BreakpointSystem#$5#mediaQueryResult": "e1",
+      "BreakpointSystem#$4#mediaQueryResult": "f1",
+      "BreakpointSystem#$3#mediaQueryResult": "g1",
+      "BreakpointSystem#updateCurrentBreakpoint#breakpoint": "h1",
+      "BreakPointType#getValue#currentBreakPoint": "i1"
+    },
+    "MemberMethodCache": {
+      "BreakPointType:46:48": "c1",
+      "getValue:50:58": "getValue",
+      "getCurrentBreakpoint:71:73": "w1",
+      "isTablet:75:78": "z1",
+      "updateCurrentBreakpoint:80:85": "a2",
+      "register:105:121": "register",
+      "unregister:123:127": "unregister"
+    },
+    "obfName": "entry/src/main/ets/a/d/e.ets"
+  },
+  "entry/src/main/ets/common/utils/Logger.ets": {
+    "IdentifierCache": {
+      "#hilog": "hilog",
+      "#Logger": "e2"
+    },
+    "MemberMethodCache": {
+      "Logger:29:32": "e2",
+      "debug:34:36": "debug",
+      "info:38:40": "info",
+      "warn:42:44": "warn",
+      "error:46:48": "error"
+    },
+    "obfName": "entry/src/main/ets/a/d/f.ets"
+  },
+  "entry/src/main/ets/entryability/EntryAbility.ets": {
+    "IdentifierCache": {
+      "#UIAbility": "UIAbility",
+      "#window": "window",
+      "#Logger": "e2",
+      "#TAG": "f2",
+      "#EntryAbility": "g2"
+    },
+    "MemberMethodCache": {
+      "onCreate:23:25": "onCreate",
+      "onDestroy:27:29": "onDestroy",
+      "onWindowStageCreate:31:41": "onWindowStageCreate",
+      "onWindowStageDestroy:43:46": "onWindowStageDestroy",
+      "onForeground:48:51": "onForeground",
+      "onBackground:53:56": "onBackground"
+    },
+    "obfName": "entry/src/main/ets/entryability/EntryAbility.ets"
+  },
+  "entry/src/main/ets/pages/IndexPage.ets": {
+    "IdentifierCache": {
+      "#IndexPage_Params": "h2",
+      "#BusinessError": "BusinessError",
+      "#webview": "webview",
+      "#window": "window",
+      "#Logger": "e2",
+      "#CommonConstants": "i",
+      "#ArkTSFunModel": "i2",
+      "#BreakpointConstants": "a1",
+      "#BreakpointSystem": "d1",
+      "#TAG": "f2",
+      "#IndexPage": "j2",
+      "IndexPage#initialRender#$8#$2#$1#exception": "k2",
+      "IndexPage#initialRender#$6#$2#$1#exception": "l2",
+      "IndexPage#initialRender#$4#$2#$1#exception": "m2",
+      "IndexPage#initialRender#$2#$4#$1#exception": "n2",
+      "IndexPage#initialRender#$2#$3#$0#isDetail": "o2",
+      "IndexPage#initialRender#$2#$2#$1#exception": "q2",
+      "IndexPage#jumpOrderConfirm#detailStr": "r2",
+      "IndexPage#showArkToast#$1#exception": "s2",
+      "IndexPage#toggleCompare#$1#exception": "t2",
+      "IndexPage#updateStatusBar#isDarkMode": "u2",
+      "IndexPage#updateStatusBar#$0#windowClass": "v2",
+      "IndexPage#updateStatusBar#$0#$2#exception": "w2",
+      "IndexPage#onBackPress#$0#$1#exception": "z2",
+      "IndexPage#aboutToAppear#$0#windowClass": "a3",
+      "IndexPage#aboutToAppear#$0#$2#exception": "b3",
+      "IndexPage#aboutToAppear#$0#$1#sliderBarHeight": "c3",
+      "IndexPage#$0#$1#$0#detailStr": "d3"
+    },
+    "MemberMethodCache": {
+      "aboutToAppear:44:70": "aboutToAppear",
+      "onPageShow:72:76": "onPageShow",
+      "onPageHide:78:81": "onPageHide",
+      "updateStatus:83:85": "updateStatus",
+      "onBackPress:87:98": "onBackPress",
+      "updateStatusBar:100:116": "updateStatusBar",
+      "toggleCompare:118:130": "toggleCompare",
+      "showArkToast:132:142": "showArkToast",
+      "jumpOrderConfirm:144:152": "jumpOrderConfirm",
+      "initialRender:154:317": "initialRender"
+    },
+    "obfName": "entry/src/main/ets/pages/IndexPage.ets"
+  },
+  "entry/src/main/ets/pages/OrderConfirmPage.ets": {
+    "IdentifierCache": {
+      "#OrderConfirmPage_Params": "f3",
+      "#BusinessError": "BusinessError",
+      "#CommonConstants": "i",
+      "#Logger": "e2",
+      "#ProductModel": "g3",
+      "#BreakpointConstants": "a1",
+      "#TAG": "f2",
+      "#OrderConfirmPage": "h3",
+      "OrderConfirmPage#initialRender#$38#$2#$1#exception": "i3",
+      "#__Text__titleStyle:24:30": "e3"
+    },
+    "MemberMethodCache": {
+      "initialRender:41:230": "initialRender"
+    },
+    "obfName": "entry/src/main/ets/pages/OrderConfirmPage.ets"
+  },
+  "compileSdkVersion": "6.0.2.130",
+  "entryPackageInfo": "entry|1.0.0",
+  "PropertyCache": {
+    "CommonConstants": "i",
+    "HARMONY_HEI_TI_FONT_FAMILY": "j",
+    "FULL_PERCENT": "m",
+    "PERCENT_50": "o",
+    "TOAST_DURATION": "t",
+    "NORMAL_SPACE": "u",
+    "BreakpointConstants": "a1",
+    "BreakPointTypeOption": "b1",
+    "BreakPointType": "c1",
+    "BreakpointSystem": "d1",
+    "BREAKPOINT_SM": "j1",
+    "BREAKPOINT_MD": "l1",
+    "BREAKPOINT_LG": "m1",
+    "CURRENT_BREAKPOINT": "n1",
+    "RANGE_SM": "o1",
+    "RANGE_MD": "q1",
+    "RANGE_LG": "s1",
+    "smListener": "t1",
+    "mdListener": "u1",
+    "lgListener": "v1",
+    "getCurrentBreakpoint": "w1",
+    "isTablet": "z1",
+    "updateCurrentBreakpoint": "a2",
+    "isBreakpointSM": "b2",
+    "isBreakpointMD": "c2",
+    "isBreakpointLG": "d2",
+    "Logger": "e2",
+    "TAG": "f2",
+    "EntryAbility": "g2",
+    "IndexPage_Params": "h2",
+    "ArkTSFunModel": "i2",
+    "IndexPage": "j2",
+    "__Text__titleStyle": "e3",
+    "OrderConfirmPage_Params": "f3",
+    "ProductModel": "g3",
+    "OrderConfirmPage": "h3",
+    "img": "j3",
+    "sku": "l3"
+  },
+  "FileNameCache": {
+    "common": "a",
+    "constants": "b",
+    "CommonConstants": "c",
+    "utils": "d",
+    "BreakpointSystem": "e",
+    "Logger": "f",
+    "model": "g",
+    "ProductModel": "h"
+  }
+}

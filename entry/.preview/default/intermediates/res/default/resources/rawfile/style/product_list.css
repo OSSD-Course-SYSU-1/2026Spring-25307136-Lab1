@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+#nav {
+    height: 56px;
+    font-size: 24px;
+    color: #182431;
+    text-align: left;
+    line-height: 56px;
+    font-weight: 700;
+    padding: 0 24px;
+}
+
+ul {
+    flex: 1;
+    overflow: scroll;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+li {
+    display: flex;
+    padding: 8px 24px;
+}
+li > img {
+    width: 106px;
+    aspect-ratio: 1;
+    border-radius: 18px;
+}
+li > div {
+    margin-left: 12px;
+    flex: 1;
+}
+li > div > p {
+    font-size: 14px;
+    line-height: 19px;
+    color: #182431;
+    font-weight: 400;
+}
+
+li > div > span {
+    font-size: 21px;
+    color: #E92F4F;
+    line-height: 28px;
+    font-weight: 500;
+}
+li > div > span > span {
+    font-size: 14px;
+}
+
+/* 比货模式勾选框 */
+.compare-checkbox {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    max-width: 16px;
+    min-height: 16px;
+    max-height: 16px;
+    border: 1.5px solid #007DFF;
+    border-radius: 3px;
+    margin-right: 6px;
+    flex: none;
+    align-self: center;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.compare-checkbox.checked {
+    background-color: #007DFF;
+    border-color: #007DFF;
+}
+.compare-checkbox.checked::after {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 8px;
+    border: solid #fff;
+    border-width: 0 1.5px 1.5px 0;
+    transform: rotate(45deg);
+    margin: 1px auto 0;
+}
+
+/* 平板设备适配：中等屏幕 (600vp~840vp) */
+@media screen and (min-width: 600px) {
+    #nav {
+        height: 64px;
+        font-size: 28px;
+        line-height: 64px;
+        padding: 0 32px;
+    }
+    li {
+        padding: 12px 32px;
+    }
+    li > img {
+        width: 150px;
+        border-radius: 22px;
+    }
+    li > div {
+        margin-left: 16px;
+    }
+    li > div > p {
+        font-size: 18px;
+        line-height: 26px;
+    }
+    li > div > span {
+        font-size: 28px;
+        line-height: 38px;
+    }
+    li > div > span > span {
+        font-size: 18px;
+    }
+}
+
+/* 平板设备适配：大屏幕 (>=840vp) */
+@media screen and (min-width: 840px) {
+    #nav {
+        height: 72px;
+        font-size: 32px;
+        line-height: 72px;
+        padding: 0 40px;
+    }
+    li {
+        padding: 16px 40px;
+    }
+    li > img {
+        width: 190px;
+        border-radius: 26px;
+    }
+    li > div {
+        margin-left: 20px;
+    }
+    li > div > p {
+        font-size: 22px;
+        line-height: 32px;
+    }
+    li > div > span {
+        font-size: 34px;
+        line-height: 46px;
+    }
+    li > div > span > span {
+        font-size: 22px;
+    }
+}

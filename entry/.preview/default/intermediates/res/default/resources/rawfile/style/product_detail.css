@@ -1,0 +1,411 @@
+body {
+    margin: 0;
+}
+
+#detail {
+    width: 100%;
+    height: 100vh;
+    background-color: #F1F3F5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#detail-info {
+    flex: 1;
+    overflow: scroll;
+}
+
+#slider {
+    width: 100vw;
+    background-color: #000000;
+    overflow: hidden;
+}
+#swiper {
+    width: 100vw;
+    background-color: #000000;
+}
+
+.slide {
+    display: none;
+    position: relative;
+}
+
+.slide.showing {
+    display: block;
+}
+
+.slide > img {
+    width: 100%;
+    aspect-ratio: 1.42;
+    margin: 16px 0 24px 0;
+    object-fit: cover;
+}
+
+/* 轮播图左上角商品标签 */
+.slide[data-label]::before {
+    content: attr(data-label);
+    position: absolute;
+    top: 24px;
+    left: 16px;
+    z-index: 2;
+    font-size: 12px;
+    color: #999999;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 2px 8px;
+    border-radius: 4px;
+    line-height: 18px;
+}
+
+#dot {
+    position: absolute;
+    right: 18px;
+    top: 68vw;
+    z-index: 2;
+    width: 36px;
+    height: 18px;
+    border-radius: 9px;
+    background-color: rgba(0,0,0,0.40);
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+#info {
+    margin: 12px;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    padding: 12px;
+    color: #182431;
+}
+
+#price-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 4px;
+}
+
+#price {
+    font-size: 20px;
+    color: #E92F4F;
+    line-height: 28px;
+    font-weight: 500;
+}
+
+#price > span {
+    font-size: 14px;
+}
+
+#compare-price {
+    font-size: 14px;
+    color: #991122;
+    line-height: 20px;
+    font-weight: 400;
+    background-color: #E5E7EB;
+    border-radius: 4px;
+    padding: 2px 8px;
+    margin-left: 10px;
+}
+
+#product-name {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 400;
+    margin-top: 12px;
+}
+
+#compare-name {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #182431;
+    background-color: #E5E7EB;
+    border-radius: 4px;
+    padding: 2px 8px;
+    margin-top: 8px;
+}
+
+#guide {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    margin-top: 26px;
+}
+
+#product-info {
+    font-size: 14px;
+    opacity: 0.6;
+    text-align: left;
+    line-height: 20px;
+    font-weight: 400;
+    margin-top: 8px;
+}
+
+.detail-p {
+    margin: 0 0 8px 0;
+}
+
+.compare-detail {
+    opacity: 1;
+    background-color: #E5E7EB;
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+
+br {
+    display: inline;
+    line-height: 8px;
+}
+
+#menu {
+    height: 56px;
+    padding: 0 12px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+#menu > div {
+    display: flex;
+}
+
+#menu > div:first-of-type {
+    flex: 1;
+    justify-content: space-around;
+}
+
+.btn {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn > img {
+    width: 24px;
+    height: 24px;
+}
+
+.btn > text {
+    margin-top: 4px;
+    font-size: 10px;
+    text-align: center;
+    color: #182431;
+}
+
+button {
+    color: #FFFFFF;
+    border: none;
+    height: 40px;
+    width: 96px
+}
+
+button:first-of-type {
+    margin-left: 8px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    background: linear-gradient(270deg, #FF914C 52%, #FEA748 96%);
+}
+
+button:last-of-type {
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    background: linear-gradient(90deg, #F64D43 11%, #EB344D 89%);
+}
+
+.btn-compare {
+    color: #FFFFFF;
+    border: none;
+    height: 40px;
+    width: 100%;
+    border-radius: 20px;
+    font-size: 14px;
+    margin: 0 4px;
+}
+
+.btn-choose-one {
+    background: linear-gradient(270deg, #FF914C 52%, #FEA748 96%);
+}
+
+.btn-choose-two {
+    background: linear-gradient(90deg, #F64D43 11%, #EB344D 89%);
+}
+
+/* 平板设备适配：中等屏幕 (600vp~840vp) */
+@media screen and (min-width: 600px) {
+    .slide > img {
+        margin: 20px 0 28px 0;
+    }
+    .slide[data-label]::before {
+        top: 28px;
+        left: 24px;
+        font-size: 14px;
+        padding: 3px 10px;
+        border-radius: 5px;
+        line-height: 22px;
+    }
+    #dot {
+        right: 24px;
+        top: 68vw;
+        width: 48px;
+        height: 24px;
+        border-radius: 12px;
+        font-size: 14px;
+        line-height: 24px;
+    }
+    #info {
+        margin: 16px;
+        border-radius: 20px;
+        padding: 16px;
+    }
+    #price {
+        font-size: 26px;
+        line-height: 36px;
+    }
+    #price > span {
+        font-size: 18px;
+    }
+    #compare-price {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    #product-name {
+        font-size: 20px;
+        line-height: 28px;
+        margin-top: 16px;
+    }
+    #compare-name {
+        font-size: 16px;
+        line-height: 22px;
+    }
+    #guide {
+        font-size: 18px;
+        line-height: 26px;
+        margin-top: 32px;
+    }
+    #product-info {
+        font-size: 18px;
+        line-height: 26px;
+        margin-top: 12px;
+    }
+    #menu {
+        height: 64px;
+        padding: 0 16px;
+    }
+    #menu > div:first-of-type {
+        flex: 0 0 auto;
+        gap: 64px;
+        margin-left: 48px;
+    }
+    #menu > div:last-of-type {
+        flex: 1;
+        justify-content: flex-end;
+    }
+    .btn > img {
+        width: 28px;
+        height: 28px;
+    }
+    .btn > text {
+        font-size: 12px;
+        margin-top: 6px;
+    }
+    button {
+        height: 48px;
+        width: 240px;
+        font-size: 16px;
+    }
+    .btn-compare {
+        height: 48px;
+        font-size: 16px;
+    }
+}
+
+/* 平板设备适配：大屏幕 (>=840vp) */
+@media screen and (min-width: 840px) {
+    .slide > img {
+        margin: 24px 0 32px 0;
+    }
+    .slide[data-label]::before {
+        top: 32px;
+        left: 32px;
+        font-size: 16px;
+        padding: 4px 12px;
+        border-radius: 6px;
+        line-height: 24px;
+    }
+    #dot {
+        right: 28px;
+        top: 68vw;
+        width: 56px;
+        height: 28px;
+        border-radius: 14px;
+        font-size: 16px;
+        line-height: 28px;
+    }
+    #info {
+        margin: 24px;
+        border-radius: 24px;
+        padding: 24px;
+    }
+    #price {
+        font-size: 32px;
+        line-height: 44px;
+    }
+    #price > span {
+        font-size: 22px;
+    }
+    #compare-price {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    #product-name {
+        font-size: 24px;
+        line-height: 34px;
+        margin-top: 20px;
+    }
+    #compare-name {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    #guide {
+        font-size: 22px;
+        line-height: 32px;
+        margin-top: 40px;
+    }
+    #product-info {
+        font-size: 22px;
+        line-height: 32px;
+        margin-top: 16px;
+    }
+    #menu {
+        height: 72px;
+        padding: 0 24px;
+    }
+    #menu > div:first-of-type {
+        flex: 0 0 auto;
+        gap: 96px;
+        margin-left: 72px;
+    }
+    #menu > div:last-of-type {
+        flex: 1;
+        justify-content: flex-end;
+    }
+    .btn > img {
+        width: 32px;
+        height: 32px;
+    }
+    .btn > text {
+        font-size: 14px;
+        margin-top: 8px;
+    }
+    button {
+        height: 56px;
+        width: 360px;
+        font-size: 18px;
+    }
+    .btn-compare {
+        height: 56px;
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,20 @@
+{
+  "moduleInfo": {
+    "content": "import UIAbility from \"@ohos:app.ability.UIAbility\";\nimport type window from \"@ohos:window\";\nimport Logger from \"@bundle:com.example.pageredirection/entry/ets/common/utils/Logger\";\nconst TAG = '[EntryAbility]';\nexport default class EntryAbility extends UIAbility {\n    onCreate(): void {\n        Logger.info(TAG, 'Ability onCreate');\n    }\n    onDestroy(): void {\n        Logger.info(TAG, 'Ability onDestroy');\n    }\n    onWindowStageCreate(windowStage: window.WindowStage): void {\n        // Main window is created, set main page for this ability.\n        Logger.info(TAG, 'Ability onWindowStageCreate');\n        windowStage.loadContent('pages/IndexPage', (err, data) => {\n            if (err.code) {\n                Logger.error(TAG, 'Failed to load the content. Cause: %{public}s', JSON.stringify(err) ?? '');\n                return;\n            }\n            Logger.info(TAG, 'Succeeded in loading the content. Data: %{public}s', JSON.stringify(data) ?? '');\n        });\n    }\n    onWindowStageDestroy(): void {\n        // Main window is destroyed, release UI related resources.\n        Logger.info(TAG, 'Ability onWindowStageDestroy');\n    }\n    onForeground(): void {\n        // Ability has brought to foreground.\n        Logger.info(TAG, 'Ability onForeground');\n    }\n    onBackground(): void {\n        // Ability has back to background.\n        Logger.info(TAG, 'Ability onBackground');\n    }\n}\n",
+    "buildFilePath": "F:\\Study\\kaiyuan\\clone\\page-redirection-master\\entry\\build\\default\\cache\\default\\default@CompileArkTS\\esmodule\\release\\entry\\src\\main\\ets\\entryability\\EntryAbility.ts",
+    "relativeSourceFilePath": "entry/src/main/ets/entryability/EntryAbility.ets",
+    "originSourceFilePath": "F:/Study/kaiyuan/clone/page-redirection-master/entry/src/main/ets/entryability/EntryAbility.ets",
+    "rollupModuleId": "F:\\Study\\kaiyuan\\clone\\page-redirection-master\\entry\\src\\main\\ets\\entryability\\EntryAbility.ets"
+  },
+  "previousStageSourceMap": {
+    "version": 3,
+    "file": "EntryAbility.ets",
+    "sourceRoot": "",
+    "sources": [
+      "entry/src/main/ets/entryability/EntryAbility.ets"
+    ],
+    "names": [],
+    "mappings": "OAeS,SAAS;YACT,MAAM;OACR,MAAM;AAEb,MAAM,GAAG,GAAG,gBAAgB,CAAC;AAE7B,MAAM,CAAC,OAAO,OAAO,YAAa,SAAQ,SAAS;IACjD,QAAQ,IAAI,IAAI;QACd,MAAM,CAAC,IAAI,CAAC,GAAG,EAAE,kBAAkB,CAAC,CAAC;IACvC,CAAC;IAED,SAAS,IAAI,IAAI;QACf,MAAM,CAAC,IAAI,CAAC,GAAG,EAAE,mBAAmB,CAAC,CAAC;IACxC,CAAC;IAED,mBAAmB,CAAC,WAAW,EAAE,MAAM,CAAC,WAAW,GAAG,IAAI;QACxD,0DAA0D;QAC1D,MAAM,CAAC,IAAI,CAAC,GAAG,EAAE,6BAA6B,CAAC,CAAC;QAChD,WAAW,CAAC,WAAW,CAAC,iBAAiB,EAAE,CAAC,GAAG,EAAE,IAAI,EAAE,EAAE;YACvD,IAAI,GAAG,CAAC,IAAI,EAAE;gBACZ,MAAM,CAAC,KAAK,CAAC,GAAG,EAAE,+CAA+C,EAAE,IAAI,CAAC,SAAS,CAAC,GAAG,CAAC,IAAI,EAAE,CAAC,CAAC;gBAC9F,OAAO;aACR;YACD,MAAM,CAAC,IAAI,CAAC,GAAG,EAAE,oDAAoD,EAAE,IAAI,CAAC,SAAS,CAAC,IAAI,CAAC,IAAI,EAAE,CAAC,CAAC;QACrG,CAAC,CAAC,CAAC;IACL,CAAC;IAED,oBAAoB,IAAI,IAAI;QAC1B,0DAA0D;QAC1D,MAAM,CAAC,IAAI,CAAC,GAAG,EAAE,8BAA8B,CAAC,CAAC;IACnD,CAAC;IAED,YAAY,IAAI,IAAI;QAClB,qCAAqC;QACrC,MAAM,CAAC,IAAI,CAAC,GAAG,EAAE,sBAAsB,CAAC,CAAC;IAC3C,CAAC;IAED,YAAY,IAAI,IAAI;QAClB,kCAAkC;QAClC,MAAM,CAAC,IAAI,CAAC,GAAG,EAAE,sBAAsB,CAAC,CAAC;IAC3C,CAAC;CACF",
+    "entry-package-info": "entry|1.0.0"
+  }
+}

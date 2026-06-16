@@ -1,0 +1,49 @@
+{
+  "projectKeepInfo": {
+    "propertyNames": [
+      "setInitiallyProvidedValue",
+      "updateStateVars",
+      "purgeVariableDependenciesOnElmtId",
+      "aboutToBeDeleted",
+      "__currentBreakpoint",
+      "currentBreakpoint",
+      "statusBarHeight",
+      "sliderBarHeight",
+      "productDetail",
+      "initialRender",
+      "rerender",
+      "getEntryName",
+      "build",
+      "detailStr",
+      "__webCanBack",
+      "webCanBack",
+      "__webCanForward",
+      "webCanForward",
+      "__controller",
+      "controller",
+      "__statusBarHeight",
+      "__sliderBarHeight",
+      "__showCompareBtn",
+      "showCompareBtn",
+      "__compareMode",
+      "compareMode",
+      "lastUrl",
+      "breakpointSystem",
+      "arkTSObj",
+      "aboutToAppear",
+      "onPageShow",
+      "onPageHide",
+      "updateStatus",
+      "onBackPress",
+      "updateStatusBar",
+      "toggleCompare",
+      "showArkToast",
+      "jumpOrderConfirm"
+    ],
+    "globalNames": []
+  },
+  "projectReservedInfo": {
+    "enumProperties": [],
+    "propertyParams": []
+  }
+}

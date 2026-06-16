@@ -1,0 +1,20 @@
+{
+  "moduleInfo": {
+    "content": "import hilog from \"@ohos:hilog\";\nclass Logger {\n    private domain: number;\n    private prefix: string;\n    private format: string = '%{public}s, %{public}s';\n    /**\n     * constructor.\n     *\n     * @param Prefix Identifies the log tag.\n     * @param domain Domain Indicates the service domain, which is a hexadecimal integer ranging from 0x0 to 0xFFFFF.\n     */\n    constructor(prefix: string = 'MyApp', domain: number = 0xFF00) {\n        this.prefix = prefix;\n        this.domain = domain;\n    }\n    debug(...args: string[]): void {\n        hilog.debug(this.domain, this.prefix, this.format, args);\n    }\n    info(...args: string[]): void {\n        hilog.info(this.domain, this.prefix, this.format, args);\n    }\n    warn(...args: string[]): void {\n        hilog.warn(this.domain, this.prefix, this.format, args);\n    }\n    error(...args: string[]): void {\n        hilog.error(this.domain, this.prefix, this.format, args);\n    }\n}\nexport default new Logger('PageRedirection', 0xFF00);\n",
+    "buildFilePath": "F:\\Study\\kaiyuan\\clone\\page-redirection-master\\entry\\build\\default\\cache\\default\\default@CompileArkTS\\esmodule\\release\\entry\\src\\main\\ets\\common\\utils\\Logger.ts",
+    "relativeSourceFilePath": "entry/src/main/ets/common/utils/Logger.ets",
+    "originSourceFilePath": "F:/Study/kaiyuan/clone/page-redirection-master/entry/src/main/ets/common/utils/Logger.ets",
+    "rollupModuleId": "F:\\Study\\kaiyuan\\clone\\page-redirection-master\\entry\\src\\main\\ets\\common\\utils\\Logger.ets"
+  },
+  "previousStageSourceMap": {
+    "version": 3,
+    "file": "Logger.ets",
+    "sourceRoot": "",
+    "sources": [
+      "entry/src/main/ets/common/utils/Logger.ets"
+    ],
+    "names": [],
+    "mappings": "OAeS,KAAK;AAEd,MAAM,MAAM;IACV,OAAO,CAAC,MAAM,EAAE,MAAM,CAAC;IACvB,OAAO,CAAC,MAAM,EAAE,MAAM,CAAC;IACvB,OAAO,CAAC,MAAM,EAAE,MAAM,GAAG,wBAAwB,CAAC;IAElD;;;;;OAKG;IACH,YAAY,MAAM,EAAE,MAAM,GAAG,OAAO,EAAE,MAAM,EAAE,MAAM,GAAG,MAAM;QAC3D,IAAI,CAAC,MAAM,GAAG,MAAM,CAAC;QACrB,IAAI,CAAC,MAAM,GAAG,MAAM,CAAC;IACvB,CAAC;IAED,KAAK,CAAC,GAAG,IAAI,EAAE,MAAM,EAAE,GAAG,IAAI;QAC5B,KAAK,CAAC,KAAK,CAAC,IAAI,CAAC,MAAM,EAAE,IAAI,CAAC,MAAM,EAAE,IAAI,CAAC,MAAM,EAAE,IAAI,CAAC,CAAC;IAC3D,CAAC;IAED,IAAI,CAAC,GAAG,IAAI,EAAE,MAAM,EAAE,GAAG,IAAI;QAC3B,KAAK,CAAC,IAAI,CAAC,IAAI,CAAC,MAAM,EAAE,IAAI,CAAC,MAAM,EAAE,IAAI,CAAC,MAAM,EAAE,IAAI,CAAC,CAAC;IAC1D,CAAC;IAED,IAAI,CAAC,GAAG,IAAI,EAAE,MAAM,EAAE,GAAG,IAAI;QAC3B,KAAK,CAAC,IAAI,CAAC,IAAI,CAAC,MAAM,EAAE,IAAI,CAAC,MAAM,EAAE,IAAI,CAAC,MAAM,EAAE,IAAI,CAAC,CAAC;IAC1D,CAAC;IAED,KAAK,CAAC,GAAG,IAAI,EAAE,MAAM,EAAE,GAAG,IAAI;QAC5B,KAAK,CAAC,KAAK,CAAC,IAAI,CAAC,MAAM,EAAE,IAAI,CAAC,MAAM,EAAE,IAAI,CAAC,MAAM,EAAE,IAAI,CAAC,CAAC;IAC3D,CAAC;CACF;AAED,eAAe,IAAI,MAAM,CAAC,iBAAiB,EAAE,MAAM,CAAC,CAAC",
+    "entry-package-info": "entry|1.0.0"
+  }
+}

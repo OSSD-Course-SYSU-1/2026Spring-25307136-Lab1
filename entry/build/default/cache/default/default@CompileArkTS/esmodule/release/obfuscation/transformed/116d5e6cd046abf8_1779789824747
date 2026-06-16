@@ -1,0 +1,20 @@
+{
+  "moduleInfo": {
+    "content": "/*\n * Copyright (c) 2023 Huawei Device Co., Ltd.\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n *     http://www.apache.org/licenses/LICENSE-2.0\n *\n * Unless required by applicable law or agreed to in writing, software\n * distributed under the License is distributed on an \"AS IS\" BASIS,\n * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n * See the License for the specific language governing permissions and\n * limitations under the License.\n */\n/**\n * Common constants for common component.\n */\nexport class CommonConstants {\n    // Font family.\n    static readonly HARMONY_HEI_TI_FONT_FAMILY = 'HarmonyHeiTi';\n    // 100 percent.\n    static readonly FULL_PERCENT: string = '100%';\n    // 50 percent.\n    static readonly PERCENT_50: string = '50%';\n    // Duration.\n    static readonly TOAST_DURATION: number = 2000;\n    // Space.\n    static readonly NORMAL_SPACE: number = 12;\n}\n",
+    "buildFilePath": "F:\\Study\\kaiyuan\\clone\\page-redirection-master\\entry\\build\\default\\cache\\default\\default@CompileArkTS\\esmodule\\release\\entry\\src\\main\\ets\\common\\constants\\CommonConstants.ts",
+    "relativeSourceFilePath": "entry/src/main/ets/common/constants/CommonConstants.ets",
+    "originSourceFilePath": "F:/Study/kaiyuan/clone/page-redirection-master/entry/src/main/ets/common/constants/CommonConstants.ets",
+    "rollupModuleId": "F:\\Study\\kaiyuan\\clone\\page-redirection-master\\entry\\src\\main\\ets\\common\\constants\\CommonConstants.ets"
+  },
+  "previousStageSourceMap": {
+    "version": 3,
+    "file": "CommonConstants.ets",
+    "sourceRoot": "",
+    "sources": [
+      "entry/src/main/ets/common/constants/CommonConstants.ets"
+    ],
+    "names": [],
+    "mappings": "AAAA;;;;;;;;;;;;;GAaG;AAEH;;GAEG;AACH,MAAM,OAAO,eAAe;IAC1B,eAAe;IACf,MAAM,CAAC,QAAQ,CAAC,0BAA0B,GAAG,cAAc,CAAC;IAE5D,eAAe;IACf,MAAM,CAAC,QAAQ,CAAC,YAAY,EAAE,MAAM,GAAG,MAAM,CAAC;IAE9C,cAAc;IACd,MAAM,CAAC,QAAQ,CAAC,UAAU,EAAE,MAAM,GAAG,KAAK,CAAC;IAE3C,YAAY;IACZ,MAAM,CAAC,QAAQ,CAAC,cAAc,EAAE,MAAM,GAAG,IAAI,CAAC;IAE9C,SAAS;IACT,MAAM,CAAC,QAAQ,CAAC,YAAY,EAAE,MAAM,GAAG,EAAE,CAAC;CAC3C",
+    "entry-package-info": "entry|1.0.0"
+  }
+}
